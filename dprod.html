@@ -171,24 +171,25 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
   
 
   <pre id="eg12" class="example hljs json">
-{
-  "@id": "https://y.com/products/uk-bonds",
-  "@type": "dprod:DataProduct",
-  "dprod:title": "UK Bonds",
-  "dprod:description": "UK Bonds is your one-stop-shop for all ...",
-  "dprod:dataProductOwner" : "https://www.linkedin.com/in/tonyseale/",
-  "dprod:lifecycle" : "Consume",
-  "dprod:outputPort": {
-    "@type": "dprod:Port",
-    "dcat:endpointURL": "https://y.com/uk-10-year-bonds",
-    "dcat:servesDataset": {
-      "@type": "dcat:Dataset",	
-      "dcat:conformsTo": "fibo:CallableBond",
-    },
-   }
-}
-    </pre>
-      <p class="note">
+  {
+    "@context": "https://ekgf.github.io/data-product-spec/dprod.jsonld",
+    "@id": "https://y.com/products/uk-bonds",
+    "@type": "DataProduct",
+    "title": "UK Bonds",
+    "description": "UK Bonds is your one-stop-shop for all ...",
+    "dataProductOwner" : "https://www.linkedin.com/in/tonyseale/",
+    "lifecycle" : "Consume",
+    "outputPort": {
+      "@type": "dprod:Port",
+      "dcat:endpointURL": "https://y.com/uk-10-year-bonds",
+      "dcat:servesDataset": {
+        "@type": "dcat:Dataset",	
+        "dcat:conformsTo": "fibo:CallableBond"
+      }
+     }
+  }
+  </pre>
+    <p class="note">
       The examples in map the type of the above classes to <code>@type</code> in the JSON-LD serialisations. You can use JSON-LD to extend the familiar JSON syntax with the shared semantics defined by DCAT and DPROD
     </p>
 
@@ -197,26 +198,14 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
 
  
       <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
+        
+      </section>
+
+      <section>
       <h2>DataProductLifecycleStatus</h2>
         The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
-        
-      </section>
-
-      <section>
-      <h2>GraphQLDataService</h2>
-        Single REST endpoint, with structure given by GraphQL schema
-        
-      </section>
-
-      <section>
-      <h2>CallbackDataService</h2>
-        Streams by making calls to a client-provided e.g. WebSockets
-        
-      </section>
-
-      <section>
-      <h2>StreamingDataService</h2>
-        Data is continuously made available
         
       </section>
 
@@ -227,26 +216,26 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
-        
-      </section>
-
-      <section>
       <h2>QueuingDataService</h2>
         Streams using a queue or topic e.g. MQTT, Kafka, DDS
         
       </section>
 
       <section>
-      <h2>FileDataService</h2>
-        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
+      <h2>DatabaseDataService</h2>
+        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
         
       </section>
 
       <section>
-      <h2>DatabaseDataService</h2>
-        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
+        
+      </section>
+
+      <section>
+      <h2>GraphQLDataService</h2>
+        Single REST endpoint, with structure given by GraphQL schema
         
       </section>
 
@@ -305,8 +294,20 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
+      <h2>StreamingDataService</h2>
+        Data is continuously made available
+        
+      </section>
+
+      <section>
+      <h2>FileDataService</h2>
+        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
+        
+      </section>
+
+      <section>
+      <h2>CallbackDataService</h2>
+        Streams by making calls to a client-provided e.g. WebSockets
         
       </section>
 
