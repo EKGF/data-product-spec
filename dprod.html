@@ -10,10 +10,7 @@
         // group: "Semantic Data Products Working Group",
 
         specStatus: "base",
-        editors: [{
-          name: "Tony Seale",
-          url:  "https://www.linkedin.com/in/tonyseale/",
-        } ,
+        editors: [
         {
           name: "Natasa Varytimou",
           url:  "https://www.ubs.com/",
@@ -303,26 +300,8 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
-
-      </section>
-
-      <section>
-      <h2>GraphQLDataService</h2>
-        Single REST endpoint, with structure given by GraphQL schema
-
-      </section>
-
-      <section>
       <h2>FileDataService</h2>
         Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
-
-      </section>
-
-      <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
 
       </section>
 
@@ -345,8 +324,26 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
+
+      </section>
+
+      <section>
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+
+      </section>
+
+      <section>
       <h2>Dataset</h2>
         see http://www.w3.org/ns/dcat#Dataset
+
+      </section>
+
+      <section>
+      <h2>GraphQLDataService</h2>
+        Single REST endpoint, with structure given by GraphQL schema
 
       </section>
 
@@ -357,8 +354,8 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
 
       </section>
 
