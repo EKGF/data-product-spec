@@ -214,6 +214,9 @@ In this example, the UK Bonds Data Product features an output port, which is a R
         <table class="def propdef">
         <tbody>
           <tr><th>Identifier:</th> <td><code>dprod:dataProductOwner</code></td></tr>
+
+          <tr><th>Label:</th><td>Data Product Owner</td></tr>
+
           <tr><th>Notes:</th><td>The Agent that is overall accountable for the data product. This includes managing the data product along its lifecycle ( creation, usage, versioning, deletion). This can be different from the creator or the publisher of the Data Product </td></tr>
           <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
           <tr><th>Range:</th><td>http://purl.org/dc/terms/Agent</td></tr>
@@ -226,6 +229,7 @@ In this example, the UK Bonds Data Product features an output port, which is a R
         <table class="def propdef">
         <tbody>
           <tr><th>Identifier:</th> <td><code>dprod:inputPort</code></td></tr>
+
           <tr><th>Notes:</th><td>an input port describes a set of services exposed by a data product to collect its source data and makes it available for further internal transformation. An input port can receive data from one or more upstream sources in a push (i.e. asynchronous subscription) or pop mode (i.e. synchronous query). Each data product may have one or more input ports</td></tr>
           <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
           <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
@@ -238,6 +242,7 @@ In this example, the UK Bonds Data Product features an output port, which is a R
         <table class="def propdef">
         <tbody>
           <tr><th>Identifier:</th> <td><code>dprod:outputPort</code></td></tr>
+
           <tr><th>Notes:</th><td>an output port describes a set of services exposed by a data product to share the generated data in a way that can be understood and trusted. Each data product must have at least one or more output ports</td></tr>
           <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
           <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
@@ -250,6 +255,7 @@ In this example, the UK Bonds Data Product features an output port, which is a R
         <table class="def propdef">
         <tbody>
           <tr><th>Identifier:</th> <td><code>dprod:lifecycle</code></td></tr>
+
           <tr><th>Notes:</th><td>The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).</td></tr>
           <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
           <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#DataProductLifecycle</td></tr>
@@ -268,6 +274,7 @@ In this example, the UK Bonds Data Product features an output port, which is a R
         <table class="def propdef">
         <tbody>
           <tr><th>Identifier:</th> <td><code>dprod:belongsToDataset</code></td></tr>
+
           <tr><th>Notes:</th><td>The dataset that this distribution makes available</td></tr>
           <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#Distribution</td></tr>
           <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#Dataset</td></tr>
@@ -286,36 +293,13 @@ In this example, the UK Bonds Data Product features an output port, which is a R
         <table class="def propdef">
         <tbody>
           <tr><th>Identifier:</th> <td><code>dprod:offersDistribution</code></td></tr>
-          <tr><th>Notes:</th><td>he dataset distribution that is being offered through this Data Service</td></tr>
+
+          <tr><th>Notes:</th><td>The dataset distribution that is being offered through this Data Service</td></tr>
           <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
           <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#Distribution</td></tr>
         </tbody>
         </table>
       </section>
-
-      </section>
-
-      <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
-
-      </section>
-
-      <section>
-      <h2>DatabaseDataService</h2>
-        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
-
-      </section>
-
-      <section>
-      <h2>ObjectDataService</h2>
-        Structured API, e.g. gRPC, CORBA, SOAP, ORM
-
-      </section>
-
-      <section>
-      <h2>StreamingDataService</h2>
-        Data is continuously made available
 
       </section>
 
@@ -326,20 +310,8 @@ In this example, the UK Bonds Data Product features an output port, which is a R
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
-
-      </section>
-
-      <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
-
-      </section>
-
-      <section>
-      <h2>QueuingDataService</h2>
-        Streams using a queue or topic e.g. MQTT, Kafka, DDS
+      <h2>DatabaseDataService</h2>
+        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
 
       </section>
 
@@ -350,14 +322,50 @@ In this example, the UK Bonds Data Product features an output port, which is a R
       </section>
 
       <section>
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
+
+      </section>
+
+      <section>
+      <h2>QueuingDataService</h2>
+        Streams using a queue or topic e.g. MQTT, Kafka, DDS
+
+      </section>
+
+      <section>
+      <h2>ObjectDataService</h2>
+        Structured API, e.g. gRPC, CORBA, SOAP, ORM
+
+      </section>
+
+      <section>
       <h2>GraphQLDataService</h2>
         Single REST endpoint, with structure given by GraphQL schema
 
       </section>
 
       <section>
+      <h2>StreamingDataService</h2>
+        Data is continuously made available
+
+      </section>
+
+      <section>
       <h2>Dataset</h2>
         see http://www.w3.org/ns/dcat#Dataset
+
+      </section>
+
+      <section>
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+
+      </section>
+
+      <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
 
       </section>
 
