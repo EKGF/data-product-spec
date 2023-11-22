@@ -25,7 +25,7 @@
         },
         //license: "w3c-software-doc",
          logos: [ {
-             src: "./dprod.jpg",
+             src: "../../images/dprod.jpg",
              alt: "DPROD",
              width: 200,
               },
@@ -37,7 +37,7 @@
     <h1 id="title">Semantic Data Products (DPROD)</h1>
     <section id='abstract'>
       <p>
-      This OMG specification defines a profile of the W3C Data Catalog (DCAT) Vocabulary, specifically designed for describing Data Products. DPROD extends DCAT to allow organisations to create Semantic Data Products that interconnect data within a Semantic Data Mesh. DPROD follows two basic principles:
+      This specification defines a profile of the W3C Data Catalog (DCAT) Vocabulary, specifically designed for describing Data Products. DPROD extends DCAT to allow organisations to create Semantic Data Products that interconnect data within a Semantic Data Mesh. DPROD follows two basic principles:
       <p>
         ⭕ <b>Shift Data Publication Left</b>: One team can't handle all data integration tasks so we should distribute responsibilities for better efficiency.
       </p>
@@ -45,15 +45,15 @@
         ⭕ <b>Shift Schema Definition Right</b>: A central team should manage a shared ontology and ensure data publishers adhere to consistent semantics.
       </p>
       <p>
-      The DPROD OMG specification enables publishers to describe datasets and data services in a catalogue using a standard model and vocabulary. This facilitates the consumption and aggregation of metadata from multiple catalogues, thereby increasing the discoverability of datasets and data services. It also supports a decentralised approach to publishing data catalogues, and enables federated searches for datasets across multiple sites using the same query mechanism and structure.
+      The DPROD specification enables publishers to describe datasets and data services in a catalogue using a standard model and vocabulary. This facilitates the consumption and aggregation of metadata from multiple catalogues, thereby increasing the discoverability of datasets and data services. It also supports a decentralised approach to publishing data catalogues, and enables federated searches for datasets across multiple sites using the same query mechanism and structure.
       The DROD recommendation extends DCAT to enable datasets to link to Data Products, the Data Products then connect together to form a Data Mesh.
       </p>
       <p>The DPROD specification has four main mains:</p>
       <p>
-        ⭕ To provide unambiguous semantics to answer the question: 'What is a data product?' 
+        ⭕ To provide unambiguous semantics to answer the question: 'What is a data product?'
       </p>
       <p>
-        ⭕ Be simple for anyone to use, but expressive enough to power full data marketplaces 
+        ⭕ Be simple for anyone to use, but expressive enough to power full data marketplaces
       </p>
       <p>
         ⭕ Allow organisations to reuse their existing data catalogues and dataset infrastructure
@@ -61,7 +61,7 @@
       <p>
         ⭕ To share common semantics across different Data Products to promote harmonisation
       </p>
-  
+
 
     </section>
     <section id="sotd" class="override">
@@ -116,7 +116,7 @@
                           </td>
                           <td>[[ODRL-VOCAB]]</td>
                       </tr>
-                    
+
                      <tr>
                           <td>
                               <code>sdo</code>
@@ -151,9 +151,9 @@
   <p>By mapping Data Product ports to DCAT DataServices, these Semantic Data Products can describe their functionality in a standard way that can be programmatically understood and used, making the data easily accessible and shareable across the organization. This approach facilitates a self-serve data infrastructure, where domain-oriented data teams can autonomously build and maintain their data products yet ensure that these products can interact and integrate seamlessly with the rest of the data ecosystem within an organization.</p>
 
   <p>In a broader sense, using standards like DCAT contributes to a powerful and expressive model for a Data Mesh, allowing for greater agility, scalability, and innovation. It ensures that as the data landscape becomes increasingly complex, the fundamental mechanisms for describing, sharing, and manipulating data remain robust and standard across the organization</p>
-        
+
     <figure id="ProfileModel">
-              <img alt="Information model for the Profile" src="./dprod-model.png">
+              <img alt="Information model for the Profile" src="../../images/dprod-model.png">
               <figcaption>
                         Overview of DCAT Profile, showing the relevant classes, properties and relationships.
                     </figcaption>
@@ -163,16 +163,16 @@
 The Profile consists of the following classes:
 <UL>
     <li> Data Mesh (<code>dcat:Catalog</code>) - The collection of Data Products </li>
-    <li> Data Product  (<code>dprod:DataProduct</code>) - A data product may have input and output ports, code and metadata</li>
+    <li> Data Product (<code>dprod:DataProduct</code>) - A data product may have input and output ports, code and metadata</li>
     <li> Port (<code>dcat:DataService</code>) - A digital interface that provides access to a Dataset. The can be a HTTPEndpoint, a Database or a FileShare etc</li>
-    <li> Distribution (<code>dcat:Distribution</code>) - A specific representation of a dataset (CSV, JSON, ADLS etc) with it own physical mode if needed</li>    
+    <li> Distribution (<code>dcat:Distribution</code>) - A specific representation of a dataset (CSV, JSON, ADLS etc) with it own physical mode if needed</li>
     <li> Dataset (<code>dcat:Dataset</code>) - A collection of data related that conforms to a logical model</li>
 </ul>
 </p>
 <p>
 Because DCAT DataService maps to the Data Mesh notion of a port we can declare a DataProduct by and specify and input and output ports. This allows user to connect their Data Products to Datasets and from there onto shared Ontologies.
 </p>
-  
+
 
   <pre id="eg12" class="example hljs json">
   {
@@ -187,10 +187,10 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       "@type": "RESTDataService",
       "dcat:endpointURL": "https://y.com/uk-10-year-bonds",
       "offersDistribution": {
-        "@type": "dcat:Distribution",	
+        "@type": "dcat:Distribution",
         "dcterms:format": "https://www.iana.org/assignments/media-types/application/json",
         "belongsToDataset": {
-          "@type": "dcat:Dataset",	
+          "@type": "dcat:Dataset",
           "dcat:conformsTo": "fibo:CallableBond"
         }
       }
@@ -200,19 +200,16 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
     <p class="note">
       The examples in map the type of the above classes to <code>@type</code> in the JSON-LD serialisations. You can use JSON-LD to extend the familiar JSON syntax with the shared semantics defined by DCAT and DPROD.
       <br/>
-      You can copy the json above and paste it into <a href="https://json-ld.org/playground/">https://json-ld.org/playground</a>. You can see that the schema resolves. 
+      You can copy the json above and paste it into <a href="https://json-ld.org/playground/">https://json-ld.org/playground</a>. You can see that the schema resolves.
     </p>
-
-    
-
 </section>
-      
 
- 
+
+
       <section>
       <h2>DataProduct</h2>
         A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
-        
+
         <section>
         <h2>dataProductOwner</h2>
         <table class="def propdef">
@@ -224,7 +221,7 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
         </tbody>
         </table>
       </section>
-        
+
         <section>
         <h2>inputPort</h2>
         <table class="def propdef">
@@ -236,7 +233,7 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
         </tbody>
         </table>
       </section>
-        
+
         <section>
         <h2>outputPort</h2>
         <table class="def propdef">
@@ -248,7 +245,7 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
         </tbody>
         </table>
       </section>
-        
+
         <section>
         <h2>lifecycle</h2>
         <table class="def propdef">
@@ -260,13 +257,13 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
         </tbody>
         </table>
       </section>
-        
+
       </section>
 
       <section>
       <h2>Distribution</h2>
         see http://www.w3.org/ns/dcat#Distribution
-        
+
         <section>
         <h2>belongsToDataset</h2>
         <table class="def propdef">
@@ -278,13 +275,13 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
         </tbody>
         </table>
       </section>
-        
+
       </section>
 
       <section>
       <h2>DataService</h2>
         see http://www.w3.org/ns/dcat#DataService
-        
+
         <section>
         <h2>offersDistribution</h2>
         <table class="def propdef">
@@ -296,77 +293,77 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
         </tbody>
         </table>
       </section>
-        
-      </section>
 
-      <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
-        
-      </section>
-
-      <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
-        
-      </section>
-
-      <section>
-      <h2>ObjectDataService</h2>
-        Structured API, e.g. gRPC, CORBA, SOAP, ORM
-        
-      </section>
-
-      <section>
-      <h2>StreamingDataService</h2>
-        Data is continuously made available
-        
-      </section>
-
-      <section>
-      <h2>FileDataService</h2>
-        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
-        
-      </section>
-
-      <section>
-      <h2>DatabaseDataService</h2>
-        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
-        
-      </section>
-
-      <section>
-      <h2>GraphQLDataService</h2>
-        Single REST endpoint, with structure given by GraphQL schema
-        
       </section>
 
       <section>
       <h2>QueuingDataService</h2>
         Streams using a queue or topic e.g. MQTT, Kafka, DDS
-        
+
       </section>
 
       <section>
-      <h2>CallbackDataService</h2>
-        Streams by making calls to a client-provided e.g. WebSockets
-        
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
-        
+      <h2>GraphQLDataService</h2>
+        Single REST endpoint, with structure given by GraphQL schema
+
+      </section>
+
+      <section>
+      <h2>FileDataService</h2>
+        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
+
+      </section>
+
+      <section>
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
+
+      </section>
+
+      <section>
+      <h2>ObjectDataService</h2>
+        Structured API, e.g. gRPC, CORBA, SOAP, ORM
+
+      </section>
+
+      <section>
+      <h2>StreamingDataService</h2>
+        Data is continuously made available
+
+      </section>
+
+      <section>
+      <h2>DatabaseDataService</h2>
+        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
+
       </section>
 
       <section>
       <h2>Dataset</h2>
         see http://www.w3.org/ns/dcat#Dataset
-        
+
+      </section>
+
+      <section>
+      <h2>CallbackDataService</h2>
+        Streams by making calls to a client-provided e.g. WebSockets
+
+      </section>
+
+      <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
+
       </section>
 
 
-      
+
 <section class="appendix">
   <h2>Acknowledgements</h2>
 <p>The editors gratefully acknowledge the feedback and contributions made to this document by: </p>
