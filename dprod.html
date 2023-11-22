@@ -123,16 +123,6 @@
                           </td>
                           <td>[[SCHEMA-ORG]]</td>
                       </tr>
-                      <tr>
-                          <td>
-                              <code>vcard</code>
-                          </td>
-                          <td>
-                              <code>http://www.w3.org/2006/vcard/ns#</code>
-                          </td>
-                          <td>[[VCARD-RDF]]</td>
-                      </tr>
-
                   </tbody>
               </table>
 
@@ -304,6 +294,12 @@ In this example, the UK Bonds Data Product features an output port, which is a R
       </section>
 
       <section>
+      <h2>GraphQLDataService</h2>
+        Single REST endpoint, with structure given by GraphQL schema
+
+      </section>
+
+      <section>
       <h2>FileDataService</h2>
         Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
 
@@ -316,44 +312,8 @@ In this example, the UK Bonds Data Product features an output port, which is a R
       </section>
 
       <section>
-      <h2>CallbackDataService</h2>
-        Streams by making calls to a client-provided e.g. WebSockets
-
-      </section>
-
-      <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
-
-      </section>
-
-      <section>
-      <h2>QueuingDataService</h2>
-        Streams using a queue or topic e.g. MQTT, Kafka, DDS
-
-      </section>
-
-      <section>
-      <h2>ObjectDataService</h2>
-        Structured API, e.g. gRPC, CORBA, SOAP, ORM
-
-      </section>
-
-      <section>
-      <h2>GraphQLDataService</h2>
-        Single REST endpoint, with structure given by GraphQL schema
-
-      </section>
-
-      <section>
-      <h2>StreamingDataService</h2>
-        Data is continuously made available
-
-      </section>
-
-      <section>
-      <h2>Dataset</h2>
-        see http://www.w3.org/ns/dcat#Dataset
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
 
       </section>
 
@@ -364,8 +324,38 @@ In this example, the UK Bonds Data Product features an output port, which is a R
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
+
+      </section>
+
+      <section>
+      <h2>ObjectDataService</h2>
+        Structured API, e.g. gRPC, CORBA, SOAP, ORM
+
+      </section>
+
+      <section>
+      <h2>StreamingDataService</h2>
+        Data is continuously made available
+
+      </section>
+
+      <section>
+      <h2>CallbackDataService</h2>
+        Streams by making calls to a client-provided e.g. WebSockets
+
+      </section>
+
+      <section>
+      <h2>QueuingDataService</h2>
+        Streams using a queue or topic e.g. MQTT, Kafka, DDS
+
+      </section>
+
+      <section>
+      <h2>Dataset</h2>
+        see http://www.w3.org/ns/dcat#Dataset
 
       </section>
 

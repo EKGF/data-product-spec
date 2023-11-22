@@ -1,67 +1,78 @@
 {
     "@context": {
         "@vocab": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "dprod": "https://ekgf.github.io/data-product-spec/dprod/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dcat": "http://www.w3.org/ns/dcat#",
         "dcterms": "http://purl.org/dc/terms/",
-        "DataProductLifecycleStatus": {
-            "@id": "https://w3id.org/dprod/DataProductLifecycleStatus"
-        },
-        "GraphQLDataService": {
-            "@id": "https://w3id.org/dprod/GraphQLDataService"
-        },
-        "RESTDataService": {
-            "@id": "https://w3id.org/dprod/RESTDataService"
-        },
-        "inputPort": {
-            "@id": "https://w3id.org/dprod/inputPort",
-            "@type": "http://www.w3.org/ns/dcat#DataService"
-        },
-        "Enumeration": {
-            "@id": "https://w3id.org/dprod/Enumeration"
+        "sh": "http://www.w3.org/ns/shacl#",
+        "DataProduct": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
         },
         "dataProductOwner": {
-            "@id": "https://w3id.org/dprod/dataProductOwner",
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
             "@type": "http://purl.org/dc/terms/Agent"
         },
-        "ObjectDataService": {
-            "@id": "https://w3id.org/dprod/ObjectDataService"
-        },
-        "DatabaseDataService": {
-            "@id": "https://w3id.org/dprod/DatabaseDataService"
-        },
         "belongsToDataset": {
-            "@id": "https://w3id.org/dprod/belongsToDataset",
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/belongsToDataset",
             "@type": "http://www.w3.org/ns/dcat#Dataset"
         },
-        "FileDataService": {
-            "@id": "https://w3id.org/dprod/FileDataService"
-        },
-        "DataProduct": {
-            "@id": "https://w3id.org/dprod/DataProduct"
-        },
-        "QueuingDataService": {
-            "@id": "https://w3id.org/dprod/QueuingDataService"
-        },
-        "StreamingDataService": {
-            "@id": "https://w3id.org/dprod/StreamingDataService"
-        },
-        "CallbackDataService": {
-            "@id": "https://w3id.org/dprod/CallbackDataService"
-        },
-        "outputPort": {
-            "@id": "https://w3id.org/dprod/outputPort",
-            "@type": "http://www.w3.org/ns/dcat#DataService"
+        "lifecycle": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycle",
+            "@type": "http://www.w3.org/ns/dcat#DataProductLifecycle"
         },
         "offersDistribution": {
-            "@id": "https://w3id.org/dprod/offersDistribution",
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/offersDistribution",
             "@type": "http://www.w3.org/ns/dcat#Distribution"
         },
-        "lifecycle": {
-            "@id": "https://w3id.org/dprod/lifecycle",
-            "@type": "http://www.w3.org/ns/dcat#DataProductLifecycle"
+        "inputPort": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/inputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "GraphQLDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/GraphQLDataService"
+        },
+        "FileDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/FileDataService"
+        },
+        "DatabaseDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DatabaseDataService"
+        },
+        "Enumeration": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/Enumeration"
+        },
+        "DataProductLifecycleStatus": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        },
+        "outputPort": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/outputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "DataService": {
+            "@id": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "RESTDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/RESTDataService"
+        },
+        "ObjectDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/ObjectDataService"
+        },
+        "StreamingDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/StreamingDataService"
+        },
+        "CallbackDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/CallbackDataService"
+        },
+        "QueuingDataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/QueuingDataService"
+        },
+        "Distribution": {
+            "@id": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "Dataset": {
+            "@id": "http://www.w3.org/ns/dcat#Dataset"
         }
     }
 }
