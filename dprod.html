@@ -22,7 +22,7 @@
         },
         //license: "w3c-software-doc",
          logos: [ {
-             src: "../../images/dprod.jpg",
+             src: "./dprod.jpg",
              alt: "DPROD",
              width: 200,
               },
@@ -150,7 +150,7 @@
   <p>In a broader sense, using standards like DCAT contributes to a powerful and expressive model for a Data Mesh, allowing for greater agility, scalability, and innovation. It ensures that as the data landscape becomes increasingly complex, the fundamental mechanisms for describing, sharing, and manipulating data remain robust and standard across the organization</p>
 
     <figure id="ProfileModel">
-              <img alt="Information model for the Profile" src="../../images/dprod-model.png">
+              <img alt="Information model for the Profile" src="./dprod-model.png">
               <figcaption>
                         Overview of DCAT Profile, showing the relevant classes, properties and relationships.
                     </figcaption>
@@ -294,14 +294,8 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>QueuingDataService</h2>
-        Streams using a queue or topic e.g. MQTT, Kafka, DDS
-
-      </section>
-
-      <section>
-      <h2>FileDataService</h2>
-        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
 
       </section>
 
@@ -318,14 +312,20 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
+      <h2>FileDataService</h2>
+        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
+
+      </section>
+
+      <section>
       <h2>DatabaseDataService</h2>
         Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
 
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
+      <h2>QueuingDataService</h2>
+        Streams using a queue or topic e.g. MQTT, Kafka, DDS
 
       </section>
 
@@ -336,8 +336,8 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>Dataset</h2>
-        see http://www.w3.org/ns/dcat#Dataset
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
 
       </section>
 
@@ -354,8 +354,8 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
+      <h2>Dataset</h2>
+        see http://www.w3.org/ns/dcat#Dataset
 
       </section>
 
