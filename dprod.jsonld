@@ -5,35 +5,51 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dcat": "http://www.w3.org/ns/dcat#",
-        "inputPort": {
-            "@id": "https://w3id.org/dprod/inputPort",
-            "@type": "http://www.w3.org/ns/dcat#DataService"
-        },
+        "cdterms": "http://purl.org/dc/terms/",
         "DataProductLifecycleStatus": {
             "@id": "https://w3id.org/dprod/DataProductLifecycleStatus"
         },
         "GraphQLDataService": {
             "@id": "https://w3id.org/dprod/GraphQLDataService"
         },
-        "CallbackDataService": {
-            "@id": "https://w3id.org/dprod/CallbackDataService"
-        },
-        "StreamingDataService": {
-            "@id": "https://w3id.org/dprod/StreamingDataService"
-        },
-        "ObjectDataService": {
-            "@id": "https://w3id.org/dprod/ObjectDataService"
-        },
-        "lifecycle": {
-            "@id": "https://w3id.org/dprod/lifecycle",
-            "@type": "http://www.w3.org/ns/dcat#DataProductLifecycle"
-        },
         "RESTDataService": {
             "@id": "https://w3id.org/dprod/RESTDataService"
+        },
+        "inputPort": {
+            "@id": "https://w3id.org/dprod/inputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "Enumeration": {
+            "@id": "https://w3id.org/dprod/Enumeration"
         },
         "dataProductOwner": {
             "@id": "https://w3id.org/dprod/dataProductOwner",
             "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "ObjectDataService": {
+            "@id": "https://w3id.org/dprod/ObjectDataService"
+        },
+        "DatabaseDataService": {
+            "@id": "https://w3id.org/dprod/DatabaseDataService"
+        },
+        "belongsToDataset": {
+            "@id": "https://w3id.org/dprod/belongsToDataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "FileDataService": {
+            "@id": "https://w3id.org/dprod/FileDataService"
+        },
+        "DataProduct": {
+            "@id": "https://w3id.org/dprod/DataProduct"
+        },
+        "QueuingDataService": {
+            "@id": "https://w3id.org/dprod/QueuingDataService"
+        },
+        "StreamingDataService": {
+            "@id": "https://w3id.org/dprod/StreamingDataService"
+        },
+        "CallbackDataService": {
+            "@id": "https://w3id.org/dprod/CallbackDataService"
         },
         "outputPort": {
             "@id": "https://w3id.org/dprod/outputPort",
@@ -43,24 +59,9 @@
             "@id": "https://w3id.org/dprod/offersDistribution",
             "@type": "http://www.w3.org/ns/dcat#Distribution"
         },
-        "QueuingDataService": {
-            "@id": "https://w3id.org/dprod/QueuingDataService"
-        },
-        "FileDataService": {
-            "@id": "https://w3id.org/dprod/FileDataService"
-        },
-        "DatabaseDataService": {
-            "@id": "https://w3id.org/dprod/DatabaseDataService"
-        },
-        "DataProduct": {
-            "@id": "https://w3id.org/dprod/DataProduct"
-        },
-        "Enumeration": {
-            "@id": "https://w3id.org/dprod/Enumeration"
-        },
-        "belongsToDataset": {
-            "@id": "https://w3id.org/dprod/belongsToDataset",
-            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        "lifecycle": {
+            "@id": "https://w3id.org/dprod/lifecycle",
+            "@type": "http://www.w3.org/ns/dcat#DataProductLifecycle"
         }
     }
 }
