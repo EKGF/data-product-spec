@@ -170,7 +170,7 @@ The Profile consists of the following classes:
  DPROD maps to the Data Mesh notion of a port to the DCAT notion of a DataService, so we can declare a DataProduct by and specify and input and output ports and these ports are Dataservice. This allows user to connect their Data Products to Datasets and from there onto shared Ontologies.
 </p>
   <p>
-  In this example the UK Bonds Data Product has an output port that is a RESTful API that returns JSON that conforms to the shared FIBO specification for callable bonds.
+In this example, the UK Bonds Data Product features an output port, which is a RESTful API. This API returns JSON data that conforms to the shared FIBO specification for callable bonds.
   </p>
 
   <pre id="eg12" class="example hljs json">
@@ -190,7 +190,7 @@ The Profile consists of the following classes:
         "dcterms:format": "https://www.iana.org/assignments/media-types/application/json",
         "belongsToDataset": {
           "@type": "dcat:Dataset",
-          "dcat:conformsTo": "fibo:CallableBond"
+          "dcat:conformsTo": "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/CallableBond"
         }
       }
      }
@@ -296,20 +296,8 @@ The Profile consists of the following classes:
       </section>
 
       <section>
-      <h2>ObjectDataService</h2>
-        Structured API, e.g. gRPC, CORBA, SOAP, ORM
-
-      </section>
-
-      <section>
-      <h2>GraphQLDataService</h2>
-        Single REST endpoint, with structure given by GraphQL schema
-
-      </section>
-
-      <section>
-      <h2>StreamingDataService</h2>
-        Data is continuously made available
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
 
       </section>
 
@@ -320,20 +308,32 @@ The Profile consists of the following classes:
       </section>
 
       <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
+      <h2>ObjectDataService</h2>
+        Structured API, e.g. gRPC, CORBA, SOAP, ORM
 
       </section>
 
       <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+      <h2>StreamingDataService</h2>
+        Data is continuously made available
 
       </section>
 
       <section>
       <h2>FileDataService</h2>
         Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
+
+      </section>
+
+      <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
+
+      </section>
+
+      <section>
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
 
       </section>
 
@@ -350,8 +350,8 @@ The Profile consists of the following classes:
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
+      <h2>GraphQLDataService</h2>
+        Single REST endpoint, with structure given by GraphQL schema
 
       </section>
 
