@@ -161,15 +161,17 @@ The Profile consists of the following classes:
 <UL>
     <li> Data Mesh (<code>dcat:Catalog</code>) - The collection of Data Products </li>
     <li> Data Product (<code>dprod:DataProduct</code>) - A data product may have input and output ports, code and metadata</li>
-    <li> Port (<code>dcat:DataService</code>) - A digital interface that provides access to a Dataset. The can be a HTTPEndpoint, a Database or a FileShare etc</li>
+    <li> Port (<code>dcat:DataService</code>) - A digital interface that provides access to a Dataset. The can be a HTTP URL, a Database or a FileShare etc</li>
     <li> Distribution (<code>dcat:Distribution</code>) - A specific representation of a dataset (CSV, JSON, ADLS etc) with it own physical mode if needed</li>
     <li> Dataset (<code>dcat:Dataset</code>) - A collection of data related that conforms to a logical model</li>
 </ul>
 </p>
 <p>
-Because DCAT DataService maps to the Data Mesh notion of a port we can declare a DataProduct by and specify and input and output ports. This allows user to connect their Data Products to Datasets and from there onto shared Ontologies.
+ DPROD maps to the Data Mesh notion of a port to the DCAT notion of a DataService, so we can declare a DataProduct by and specify and input and output ports and these ports are Dataservice. This allows user to connect their Data Products to Datasets and from there onto shared Ontologies.
 </p>
-
+  <p>
+  In this example the UK Bonds Data Product has an output port that is a RESTful API that returns JSON that conforms to the shared FIBO specification for callable bonds.
+  </p>
 
   <pre id="eg12" class="example hljs json">
   {
@@ -294,50 +296,8 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
-
-      </section>
-
-      <section>
       <h2>ObjectDataService</h2>
         Structured API, e.g. gRPC, CORBA, SOAP, ORM
-
-      </section>
-
-      <section>
-      <h2>StreamingDataService</h2>
-        Data is continuously made available
-
-      </section>
-
-      <section>
-      <h2>FileDataService</h2>
-        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
-
-      </section>
-
-      <section>
-      <h2>DatabaseDataService</h2>
-        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
-
-      </section>
-
-      <section>
-      <h2>QueuingDataService</h2>
-        Streams using a queue or topic e.g. MQTT, Kafka, DDS
-
-      </section>
-
-      <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
-
-      </section>
-
-      <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
 
       </section>
 
@@ -348,8 +308,50 @@ Because DCAT DataService maps to the Data Mesh notion of a port we can declare a
       </section>
 
       <section>
+      <h2>StreamingDataService</h2>
+        Data is continuously made available
+
+      </section>
+
+      <section>
+      <h2>DatabaseDataService</h2>
+        Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
+
+      </section>
+
+      <section>
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
+
+      </section>
+
+      <section>
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+
+      </section>
+
+      <section>
+      <h2>FileDataService</h2>
+        Uses file-like access methods. May or may not be streaming if the file is continuously wriitten to
+
+      </section>
+
+      <section>
+      <h2>QueuingDataService</h2>
+        Streams using a queue or topic e.g. MQTT, Kafka, DDS
+
+      </section>
+
+      <section>
       <h2>CallbackDataService</h2>
         Streams by making calls to a client-provided e.g. WebSockets
+
+      </section>
+
+      <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
 
       </section>
 
