@@ -152,11 +152,8 @@ The Profile consists of the following classes:
 </ul>
 </p>
 <p>
- DPROD maps to the Data Mesh notion of a port to the DCAT notion of a DataService, so we can declare a DataProduct by and specify and input and output ports and these ports are Dataservice. This allows user to connect their Data Products to Datasets and from there onto shared Ontologies.
+As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Services</a>, the DPROD <a href="#inputport">input</a> and <a href="#outputport">output</a> ports can specify connection details, they have <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution">distributions</a> that define formats, and link to <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">datasets</a> that conform to shared ontologies. In this example, the UK Bonds Data Product includes an output port, which is a RESTful API. This API delivers JSON data conforming to the shared FIBO specification for callable bonds.
 </p>
-  <p>
-In this example, the UK Bonds Data Product features an output port, which is a RESTful API. This API returns JSON data that conforms to the shared FIBO specification for callable bonds.
-  </p>
 
   <pre id="eg12" class="example hljs json">
   {
@@ -289,50 +286,20 @@ In this example, the UK Bonds Data Product features an output port, which is a R
       </section>
 
       <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
-
-      </section>
-
-      <section>
-      <h2>Dataset</h2>
-        None
-
-      </section>
-
-      <section>
       <h2>DatabaseDataService</h2>
         Uses database-like access methods, including query e.g. JDBC, ODBC, SPARQL endpoint
 
       </section>
 
       <section>
-      <h2>QueuingDataService</h2>
-        Streams using a queue or topic e.g. MQTT, Kafka, DDS
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
 
       </section>
 
       <section>
-      <h2>GraphQLDataService</h2>
-        Single REST endpoint, with structure given by GraphQL schema
-
-      </section>
-
-      <section>
-      <h2>RESTDataService</h2>
-        Accessed using http verbs with parameters, may be defined using OpenAPI
-
-      </section>
-
-      <section>
-      <h2>ObjectDataService</h2>
-        Structured API, e.g. gRPC, CORBA, SOAP, ORM
-
-      </section>
-
-      <section>
-      <h2>StreamingDataService</h2>
-        Data is continuously made available
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
 
       </section>
 
@@ -349,8 +316,38 @@ In this example, the UK Bonds Data Product features an output port, which is a R
       </section>
 
       <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
+      <h2>GraphQLDataService</h2>
+        Single REST endpoint, with structure given by GraphQL schema
+
+      </section>
+
+      <section>
+      <h2>QueuingDataService</h2>
+        Streams using a queue or topic e.g. MQTT, Kafka, DDS
+
+      </section>
+
+      <section>
+      <h2>ObjectDataService</h2>
+        Structured API, e.g. gRPC, CORBA, SOAP, ORM
+
+      </section>
+
+      <section>
+      <h2>StreamingDataService</h2>
+        Data is continuously made available
+
+      </section>
+
+      <section>
+      <h2>RESTDataService</h2>
+        Accessed using http verbs with parameters, may be defined using OpenAPI
+
+      </section>
+
+      <section>
+      <h2>Dataset</h2>
+        None
 
       </section>
 
