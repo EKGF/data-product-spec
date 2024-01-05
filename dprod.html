@@ -210,14 +210,14 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
         <section>
-        <h2>port</h2>
+        <h2>inputPort</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:port</code></td></tr>
+          <tr><th>Identifier:</th> <td><code>dprod:inputPort</code></td></tr>
 
-          <tr><th>Label:</th><td>port</td></tr>
+          <tr><th>Label:</th><td>inputPort</td></tr>
 
-          <tr><th>Notes:</th><td>a port describes a set of services exposed by a data product.</td></tr>
+          <tr><th>Notes:</th><td>an input port describes a set of services exposed by a data product to collect its source data and makes it available for further internal transformation. An input port can receive data from one or more upstream sources in a push (i.e. asynchronous subscription) or pop mode (i.e. synchronous query). Each data product may have one or more input ports</td></tr>
           <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
           <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
         </tbody>
@@ -344,20 +344,26 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>DatasetShape</h2>
-        The shape of the DCAT Dataset as used in the DPROD vocabulary.
-
-      </section>
-
-      <section>
-      <h2>DataProductLifecycleStatusShape</h2>
-        The shape of Data Product Lifecycle Status
+      <h2>SecuritySchemaType</h2>
+        A security schema type used for authentication and communication.
 
       </section>
 
       <section>
       <h2>SecuritySchemaTypeShape</h2>
         A security schema type used for authentication and communication.
+
+      </section>
+
+      <section>
+      <h2>DatasetShape</h2>
+        The shape of the DCAT Dataset as used in the DPROD vocabulary.
+
+      </section>
+
+      <section>
+      <h2>DataProductShape</h2>
+        The shape of the Data Product. A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
 
       </section>
 
@@ -374,14 +380,32 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
+      <h2>EnumerationShape</h2>
+        The shape of enumerations
+
+      </section>
+
+      <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
+
+      </section>
+
+      <section>
       <h2>DataProductLifecycleStatus</h2>
         The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
 
       </section>
 
       <section>
-      <h2>DataProductShape</h2>
-        The shape of the Data Product. A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
+      <h2>InformationSensitivityClassification</h2>
+        A taxonomy of concepts that classifies the information within a dataset that indicates the level of control and protection that must be applied to the dataset
+
+      </section>
+
+      <section>
+      <h2>InformationSensitivityClassificationShape</h2>
+        The shape of Information Sensitivity Classification as defined in the dprod schema
 
       </section>
 
@@ -398,44 +422,8 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>InformationSensitivityClassification</h2>
-        A taxonomy of concepts that classifies the information within a dataset that indicates the level of control and protection that must be applied to the dataset
-
-      </section>
-
-      <section>
       <h2>Domain</h2>
         The business or information area supported by the data product.
-
-      </section>
-
-      <section>
-      <h2>InformationSensitivityClassificationShape</h2>
-        The shape of Information Sensitivity Classification as defined in the dprod schema
-
-      </section>
-
-      <section>
-      <h2>DomainShape</h2>
-        The business or information area supported by the data product.
-
-      </section>
-
-      <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
-
-      </section>
-
-      <section>
-      <h2>EnumerationShape</h2>
-        The shape of enumerations
-
-      </section>
-
-      <section>
-      <h2>SecuritySchemaType</h2>
-        A security schema type used for authentication and communication.
 
       </section>
 
@@ -457,6 +445,18 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         </tbody>
         </table>
       </section>
+
+      </section>
+
+      <section>
+      <h2>DataProductLifecycleStatusShape</h2>
+        The shape of Data Product Lifecycle Status
+
+      </section>
+
+      <section>
+      <h2>DomainShape</h2>
+        The business or information area supported by the data product.
 
       </section>
 
