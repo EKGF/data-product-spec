@@ -287,26 +287,89 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>DistributionShape</h2>
+      <h2>Distribution</h2>
 
+
+        <section>
+        <h2>isDistributionOf</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th> <td><code>dprod:isDistributionOf</code></td></tr>
+
+          <tr><th>Label:</th><td>isDistributionOf</td></tr>
+
+          <tr><th>Notes:</th><td>The dataset that this distribution makes available</td></tr>
+          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#Distribution</td></tr>
+          <tr><th>Range:</th><td></td></tr>
+        </tbody>
+        </table>
+      </section>
+
+        <section>
+        <h2>belongsToDataset</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th> <td><code>dprod:belongsToDataset</code></td></tr>
+
+          <tr><th>Label:</th><td></td></tr>
+
+          <tr><th>Notes:</th><td>The dataset that this distribution makes available</td></tr>
+          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#Distribution</td></tr>
+          <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#Dataset</td></tr>
+        </tbody>
+        </table>
+      </section>
 
       </section>
 
       <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+      <h2>DataService</h2>
 
+
+        <section>
+        <h2>offersDistribution</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th> <td><code>dprod:offersDistribution</code></td></tr>
+
+          <tr><th>Label:</th><td></td></tr>
+
+          <tr><th>Notes:</th><td>The dataset distribution that is being offered through this Data Service</td></tr>
+          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
+          <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#Distribution</td></tr>
+        </tbody>
+        </table>
       </section>
 
-      <section>
-      <h2>DataProductShape</h2>
-        A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
+        <section>
+        <h2>protocol</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th> <td><code>dprod:protocol</code></td></tr>
 
+          <tr><th>Label:</th><td></td></tr>
+
+          <tr><th>Notes:</th><td>A protocol (possibly one of many options) used to communicate with this Data Service</td></tr>
+          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
+          <tr><th>Range:</th><td></td></tr>
+        </tbody>
+        </table>
       </section>
 
-      <section>
-      <h2>DatasetShape</h2>
+        <section>
+        <h2>securitySchemaType</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th> <td><code>dprod:securitySchemaType</code></td></tr>
 
+          <tr><th>Label:</th><td></td></tr>
+
+          <tr><th>Notes:</th><td>The security schema type used for authentication and to communication with this Data Service</td></tr>
+          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
+          <tr><th>Range:</th><td></td></tr>
+        </tbody>
+        </table>
+      </section>
 
       </section>
 
@@ -317,8 +380,8 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>DataServiceShape</h2>
-
+      <h2>DataProductShape</h2>
+        A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
 
       </section>
 
@@ -329,8 +392,38 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+
+      </section>
+
+      <section>
       <h2>Enumeration</h2>
         The superclass of enumeration lists referenced from Data Product related artifacts
+
+      </section>
+
+      <section>
+      <h2>DataServiceShape</h2>
+
+
+      </section>
+
+      <section>
+      <h2>DistributionShape</h2>
+
+
+      </section>
+
+      <section>
+      <h2>DatasetShape</h2>
+
+
+      </section>
+
+      <section>
+      <h2>Dataset</h2>
+
 
       </section>
 
