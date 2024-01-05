@@ -8,52 +8,52 @@
         "dcat": "http://www.w3.org/ns/dcat#",
         "dcterms": "http://purl.org/dc/terms/",
         "sh": "http://www.w3.org/ns/shacl#",
-        "DistributionShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DistributionShape"
-        },
-        "Protocol": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/Protocol"
-        },
-        "DataProduct": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
-        },
-        "SecuritySchemaType": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
-        },
         "purpose": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/purpose",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "DataProductShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductShape"
+        "dataProductOwner": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
+            "@type": "http://xmlns.com/foaf/0.1/Agent"
         },
         "offersDistribution": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/offersDistribution",
             "@type": "http://www.w3.org/ns/dcat#Distribution"
         },
-        "DatasetShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DatasetShape"
+        "belongsToDataset": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/belongsToDataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
         },
-        "Enumeration": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/Enumeration"
+        "DistributionShape": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DistributionShape"
         },
         "DataProductLifecycleStatus": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
         },
-        "belongsToDataset": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/belongsToDataset",
-            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        "DataProductShape": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductShape"
         },
         "productionProcessDescription": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/productionProcessDescription",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
+        "DatasetShape": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DatasetShape"
+        },
+        "SecuritySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
+        },
         "DataServiceShape": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/DataServiceShape"
         },
-        "dataProductOwner": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
-            "@type": "http://xmlns.com/foaf/0.1/Agent"
+        "DataProduct": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
+        },
+        "Protocol": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/Protocol"
+        },
+        "Enumeration": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/Enumeration"
         }
     }
 }
