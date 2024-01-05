@@ -192,79 +192,19 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
 
       <section>
       <h2>DataProduct</h2>
-        A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
+        The shape of the Data Product. A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
 
         <section>
         <h2>dataProductOwner</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:dataProductOwner</code></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-dataProductOwner">dprod:dataProductOwner</a></td></tr>
 
-          <tr><th>Label:</th><td>Data Product Owner</td></tr>
+          <tr><th>Label:</th><td>DataProduct-dataProductOwner</td></tr>
 
-          <tr><th>Notes:</th><td>The Agent that is overall accountable for the data product. This includes managing the data product along its lifecycle ( creation, usage, versioning, deletion). This can be different from the creator or the publisher of the Data Product </td></tr>
-          <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
-          <tr><th>Range:</th><td>http://purl.org/dc/terms/Agent</td></tr>
-        </tbody>
-        </table>
-      </section>
-
-        <section>
-        <h2>inputPort</h2>
-        <table class="def propdef">
-        <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:inputPort</code></td></tr>
-
-          <tr><th>Label:</th><td>inputPort</td></tr>
-
-          <tr><th>Notes:</th><td>an input port describes a set of services exposed by a data product to collect its source data and makes it available for further internal transformation. An input port can receive data from one or more upstream sources in a push (i.e. asynchronous subscription) or pop mode (i.e. synchronous query). Each data product may have one or more input ports</td></tr>
-          <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
-          <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
-        </tbody>
-        </table>
-      </section>
-
-        <section>
-        <h2>lifecycleStatus</h2>
-        <table class="def propdef">
-        <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:lifecycleStatus</code></td></tr>
-
-          <tr><th>Label:</th><td>lifecycleStatus</td></tr>
-
-          <tr><th>Notes:</th><td>The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).</td></tr>
-          <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
-          <tr><th>Range:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycle</td></tr>
-        </tbody>
-        </table>
-      </section>
-
-        <section>
-        <h2>purpose</h2>
-        <table class="def propdef">
-        <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:purpose</code></td></tr>
-
-          <tr><th>Label:</th><td>purpose</td></tr>
-
-          <tr><th>Notes:</th><td>A description of the objectives and intended usage of the data product.</td></tr>
-          <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
-          <tr><th>Range:</th><td>http://www.w3.org/2001/XMLSchema#string</td></tr>
-        </tbody>
-        </table>
-      </section>
-
-        <section>
-        <h2>productionProcessDescription</h2>
-        <table class="def propdef">
-        <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:productionProcessDescription</code></td></tr>
-
-          <tr><th>Label:</th><td>productionProcessDescription</td></tr>
-
-          <tr><th>Notes:</th><td>A description of how the data comprising the data product is gathered, refined, or managed.</td></tr>
-          <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
-          <tr><th>Range:</th><td>http://www.w3.org/2001/XMLSchema#string</td></tr>
+          <tr><th>Notes:</th><td>The Agent that is overall accountable for the data product. This includes managing the data product along its lifecycle ( creation, usage, versioning, deletion). </td></tr>
+          <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://purl.org/dc/terms/Agent">dct:Agent</a></td></tr>
         </tbody>
         </table>
       </section>
@@ -273,13 +213,73 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>domain</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:domain</code></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-domain">dprod:domain</a></td></tr>
 
-          <tr><th>Label:</th><td>domain</td></tr>
+          <tr><th>Label:</th><td>DataProduct-domain</td></tr>
 
           <tr><th>Notes:</th><td>The business or information area supported by the data product.</td></tr>
-          <tr><th>Domain:</th><td>https://ekgf.github.io/data-product-spec/dprod/DataProduct</td></tr>
-          <tr><th>Range:</th><td></td></tr>
+          <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
+          <tr><th>Range:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Domain">dprod:Domain</a></td></tr>
+        </tbody>
+        </table>
+      </section>
+
+        <section>
+        <h2>inputPort</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-inputPort">dprod:inputPort</a></td></tr>
+
+          <tr><th>Label:</th><td>DataProduct-inputPort</td></tr>
+
+          <tr><th>Notes:</th><td>an input port describes a set of services exposed by a data product to collect its source data and makes it available for further internal transformation. An input port can receive data from one or more upstream sources in a push (i.e. asynchronous subscription) or pop mode (i.e. synchronous query). Each data product may have one or more input ports</td></tr>
+          <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/ns/dcat#DataService">dcat:DataService</a></td></tr>
+        </tbody>
+        </table>
+      </section>
+
+        <section>
+        <h2>outputPort</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-outputPort">dprod:outputPort</a></td></tr>
+
+          <tr><th>Label:</th><td>DataProduct-outputPort</td></tr>
+
+          <tr><th>Notes:</th><td>an output port describes a set of services exposed by a data product to share the generated data in a way that can be understood and trusted.</td></tr>
+          <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/ns/dcat#DataService">dcat:DataService</a></td></tr>
+        </tbody>
+        </table>
+      </section>
+
+        <section>
+        <h2>purpose</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-purpose">dprod:purpose</a></td></tr>
+
+          <tr><th>Label:</th><td>DataProduct-purpose</td></tr>
+
+          <tr><th>Notes:</th><td>A description of the objectives and intended usage of the data product.</td></tr>
+          <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr>
+        </tbody>
+        </table>
+      </section>
+
+        <section>
+        <h2>productionProcessDescription</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-productionProcessDescription">dprod:productionProcessDescription</a></td></tr>
+
+          <tr><th>Label:</th><td>DataProduct-productionProcessDescription</td></tr>
+
+          <tr><th>Notes:</th><td>A description of how the data comprising the data product is gathered, refined, or managed.</td></tr>
+          <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr>
         </tbody>
         </table>
       </section>
@@ -287,26 +287,20 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>Distribution</h2>
-
-
-      </section>
-
-      <section>
       <h2>DataService</h2>
-
+        The shape of the DCAT Data Service as used in the DPROD vocabulary.
 
         <section>
         <h2>isAccessServiceOf</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:isAccessServiceOf</code></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-isAccessServiceOf">dprod:isAccessServiceOf</a></td></tr>
 
-          <tr><th>Label:</th><td>is Access Service Of</td></tr>
+          <tr><th>Label:</th><td>DataService-isAccessServiceOf</td></tr>
 
           <tr><th>Notes:</th><td>The dataset distribution that is being offered through this Data Service</td></tr>
-          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
-          <tr><th>Range:</th><td>http://www.w3.org/ns/dcat#Distribution</td></tr>
+          <tr><th>Domain:</th><td><a href="http://www.w3.org/ns/dcat#DataService">dcat:DataService</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/ns/dcat#Distribution">dcat:Distribution</a></td></tr>
         </tbody>
         </table>
       </section>
@@ -315,13 +309,13 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>protocol</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:protocol</code></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-protocol">dprod:protocol</a></td></tr>
 
-          <tr><th>Label:</th><td>protocol</td></tr>
+          <tr><th>Label:</th><td></td></tr>
 
-          <tr><th>Notes:</th><td>A protocol (possibly one of many options) used to communicate with this Data Service</td></tr>
-          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
-          <tr><th>Range:</th><td></td></tr>
+          <tr><th>Notes:</th><td></td></tr>
+          <tr><th>Domain:</th><td><a href="http://www.w3.org/ns/dcat#DataService">dcat:DataService</a></td></tr>
+          <tr><th>Range:</th><td><a href=""></a></td></tr>
         </tbody>
         </table>
       </section>
@@ -330,13 +324,13 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>securitySchemaType</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:securitySchemaType</code></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-securitySchemaType">dprod:securitySchemaType</a></td></tr>
 
           <tr><th>Label:</th><td></td></tr>
 
-          <tr><th>Notes:</th><td>The security schema type used for authentication and to communication with this Data Service</td></tr>
-          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#DataService</td></tr>
-          <tr><th>Range:</th><td></td></tr>
+          <tr><th>Notes:</th><td></td></tr>
+          <tr><th>Domain:</th><td><a href="http://www.w3.org/ns/dcat#DataService">dcat:DataService</a></td></tr>
+          <tr><th>Range:</th><td><a href=""></a></td></tr>
         </tbody>
         </table>
       </section>
@@ -344,80 +338,74 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>SecuritySchemaType</h2>
-        A security schema type used for authentication and communication.
-
-      </section>
-
-      <section>
-      <h2>SecuritySchemaTypeShape</h2>
-        A security schema type used for authentication and communication.
-
-      </section>
-
-      <section>
-      <h2>DatasetShape</h2>
-        The shape of the DCAT Dataset as used in the DPROD vocabulary.
-
-      </section>
-
-      <section>
-      <h2>DataProductShape</h2>
-        The shape of the Data Product. A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
-
-      </section>
-
-      <section>
-      <h2>DistributionShape</h2>
+      <h2>Distribution</h2>
         The shape of the DCAT Distribution as used in the DPROD vocabulary.
 
+        <section>
+        <h2>accessService</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#Distribution-accessService">dprod:accessService</a></td></tr>
+
+          <tr><th>Label:</th><td>Distribution-accessService</td></tr>
+
+          <tr><th>Notes:</th><td>A data service that gives access to the distribution of the dataset</td></tr>
+          <tr><th>Domain:</th><td><a href="http://www.w3.org/ns/dcat#Distribution">dcat:Distribution</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/ns/dcat#DataService">dcat:DataService</a></td></tr>
+        </tbody>
+        </table>
       </section>
 
-      <section>
-      <h2>DataServiceShape</h2>
-        The shape of the DCAT Data Service as used in the DPROD vocabulary.
+        <section>
+        <h2>isDistributionOf</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#Distribution-isDistributionOf">dprod:isDistributionOf</a></td></tr>
 
+          <tr><th>Label:</th><td>Distribution-isDistributionOf</td></tr>
+
+          <tr><th>Notes:</th><td>The dataset that this distribution makes available</td></tr>
+          <tr><th>Domain:</th><td><a href="http://www.w3.org/ns/dcat#Distribution">dcat:Distribution</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></td></tr>
+        </tbody>
+        </table>
       </section>
-
-      <section>
-      <h2>EnumerationShape</h2>
-        The shape of enumerations
-
-      </section>
-
-      <section>
-      <h2>Enumeration</h2>
-        The superclass of enumeration lists referenced from Data Product related artifacts
-
-      </section>
-
-      <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
-
-      </section>
-
-      <section>
-      <h2>InformationSensitivityClassification</h2>
-        A taxonomy of concepts that classifies the information within a dataset that indicates the level of control and protection that must be applied to the dataset
-
-      </section>
-
-      <section>
-      <h2>InformationSensitivityClassificationShape</h2>
-        The shape of Information Sensitivity Classification as defined in the dprod schema
 
       </section>
 
       <section>
-      <h2>Protocol</h2>
-        A protocol, possibly including a specific version, used for communicating with a service
+      <h2>Dataset</h2>
+        The shape of the DCAT Dataset as used in the DPROD vocabulary.
 
+        <section>
+        <h2>distribution</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#Dataset-distribution">dprod:distribution</a></td></tr>
+
+          <tr><th>Label:</th><td>Dataset-distribution</td></tr>
+
+          <tr><th>Notes:</th><td>An available distribution of the dataset</td></tr>
+          <tr><th>Domain:</th><td><a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></td></tr>
+          <tr><th>Range:</th><td><a href="http://www.w3.org/ns/dcat#Distribution">dcat:Distribution</a></td></tr>
+        </tbody>
+        </table>
       </section>
 
-      <section>
-      <h2>ProtocolShape</h2>
-        A protocol, possibly including a specific version, used for communicating with a service
+        <section>
+        <h2>informationSensitivityClassification</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#Dataset-informationSensitivityClassification">dprod:informationSensitivityClassification</a></td></tr>
+
+          <tr><th>Label:</th><td>Dataset-informationSensitivityClassification</td></tr>
+
+          <tr><th>Notes:</th><td>The relationship to a taxonomy that defines the different levels of control and protection that must be applied to the dataset. This is a more granular relationship of the classification of a dataset that includes other classification concepts  </td></tr>
+          <tr><th>Domain:</th><td><a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></td></tr>
+          <tr><th>Range:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification">dprod:InformationSensitivityClassification</a></td></tr>
+        </tbody>
+        </table>
+      </section>
 
       </section>
 
@@ -428,35 +416,32 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>Dataset</h2>
-
-
-        <section>
-        <h2>informationSensitivityClassification</h2>
-        <table class="def propdef">
-        <tbody>
-          <tr><th>Identifier:</th> <td><code>dprod:informationSensitivityClassification</code></td></tr>
-
-          <tr><th>Label:</th><td>information Sensitivity Classification</td></tr>
-
-          <tr><th>Notes:</th><td>More granular classification that indicates the level of control and protection that must be applied to the asset due to the nature of the data and its sensitivity or importance to the organization</td></tr>
-          <tr><th>Domain:</th><td>http://www.w3.org/ns/dcat#Dataset</td></tr>
-          <tr><th>Range:</th><td>https://ekgf.github.io/data-product-spec/dprod/InformationSensitiviyClassification</td></tr>
-        </tbody>
-        </table>
-      </section>
+      <h2>Protocol</h2>
+        A protocol, possibly including a specific version, used for communicating with a service
 
       </section>
 
       <section>
-      <h2>DataProductLifecycleStatusShape</h2>
+      <h2>InformationSensitivityClassification</h2>
+        The shape of Information Sensitivity Classification as defined in the dprod schema
+
+      </section>
+
+      <section>
+      <h2>SecuritySchemaType</h2>
+        A security schema type used for authentication and communication.
+
+      </section>
+
+      <section>
+      <h2>DataProductLifecycleStatus</h2>
         The shape of Data Product Lifecycle Status
 
       </section>
 
       <section>
-      <h2>DomainShape</h2>
-        The business or information area supported by the data product.
+      <h2>Enumeration</h2>
+        The shape of enumerations
 
       </section>
 

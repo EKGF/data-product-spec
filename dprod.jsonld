@@ -8,89 +8,59 @@
         "dcat": "http://www.w3.org/ns/dcat#",
         "dcterms": "http://purl.org/dc/terms/",
         "sh": "http://www.w3.org/ns/shacl#",
-        "DataService": {
-            "@id": "http://www.w3.org/ns/dcat#DataService"
-        },
-        "dataProductOwner": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
-            "@type": "http://purl.org/dc/terms/Agent"
-        },
-        "SecuritySchemaType": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
-        },
-        "SecuritySchemaTypeShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaTypeShape"
-        },
         "informationSensitivityClassification": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification",
             "@type": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitiviyClassification"
         },
-        "DatasetShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DatasetShape"
-        },
-        "DataProductShape": {
+        "DataProduct": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductShape"
         },
-        "isAccessServiceOf": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
-            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        "Domain": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DomainShape"
+        },
+        "DataService": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataServiceShape"
         },
         "productionProcessDescription": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/productionProcessDescription",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "DistributionShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DistributionShape"
+        "Dataset": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DatasetShape"
         },
-        "DataServiceShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataServiceShape"
-        },
-        "EnumerationShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/EnumerationShape"
-        },
-        "lifecycleStatus": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus",
-            "@type": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycle"
-        },
-        "Enumeration": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/Enumeration"
-        },
-        "DataProductLifecycleStatus": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
-        },
-        "InformationSensitivityClassification": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
+        "Protocol": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/ProtocolShape"
         },
         "purpose": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/purpose",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "InformationSensitivityClassificationShape": {
+        "InformationSensitivityClassification": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassificationShape"
         },
+        "isAccessServiceOf": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
+            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "dataProductOwner": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
+            "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "lifecycleStatus": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus",
+            "@type": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycle"
+        },
+        "SecuritySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaTypeShape"
+        },
         "Distribution": {
-            "@id": "http://www.w3.org/ns/dcat#Distribution"
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DistributionShape"
         },
-        "Protocol": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/Protocol"
-        },
-        "ProtocolShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/ProtocolShape"
-        },
-        "Domain": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/Domain"
-        },
-        "Dataset": {
-            "@id": "http://www.w3.org/ns/dcat#Dataset"
-        },
-        "DataProduct": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
-        },
-        "DataProductLifecycleStatusShape": {
+        "DataProductLifecycleStatus": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatusShape"
         },
-        "DomainShape": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DomainShape"
+        "Enumeration": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/EnumerationShape"
         }
     }
 }
