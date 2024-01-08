@@ -170,10 +170,10 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
     "outputPort": {
       "@type": "dcat:DataService",
       "dcat:endpointURL": "https://y.com/uk-10-year-bonds",
-      "offersDistribution": {
+      "isAccessServiceOf": {
         "@type": "dcat:Distribution",
         "dcterms:format": "https://www.iana.org/assignments/media-types/application/json",
-        "belongsToDataset": {
+        "isDistributionOf": {
           "@type": "dcat:Dataset",
           "dcat:conformsTo": "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/CallableBond"
         }
@@ -192,7 +192,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
 
       <section>
       <h2>DataProduct</h2>
-        The shape of the Data Product. A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
+        A data product is a rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle.
 
         <section>
         <h2>dataProductOwner</h2>
@@ -410,6 +410,24 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
+      <h2>InformationSensitivityClassification</h2>
+        A taxonomy of concepts that classifies the information within a dataset that indicates the level of control and protection that must be applied to the dataset
+
+      </section>
+
+      <section>
+      <h2>Enumeration</h2>
+        The superclass of enumeration lists referenced from Data Product related artifacts
+
+      </section>
+
+      <section>
+      <h2>SecuritySchemaType</h2>
+        A security schema type used for authentication and communication.
+
+      </section>
+
+      <section>
       <h2>Domain</h2>
         The business or information area supported by the data product.
 
@@ -422,26 +440,8 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>InformationSensitivityClassification</h2>
-        The shape of Information Sensitivity Classification as defined in the dprod schema
-
-      </section>
-
-      <section>
-      <h2>SecuritySchemaType</h2>
-        A security schema type used for authentication and communication.
-
-      </section>
-
-      <section>
       <h2>DataProductLifecycleStatus</h2>
-        The shape of Data Product Lifecycle Status
-
-      </section>
-
-      <section>
-      <h2>Enumeration</h2>
-        The shape of enumerations
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
 
       </section>
 
