@@ -32,9 +32,6 @@
             "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus",
             "@type": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
         },
-        "DataService": {
-            "@id": "http://www.w3.org/ns/dcat#DataService"
-        },
         "InformationSensitivityClassification": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
         },
