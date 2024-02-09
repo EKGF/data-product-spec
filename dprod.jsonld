@@ -14,6 +14,10 @@
             "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
             "@type": "http://www.w3.org/ns/dcat#Distribution"
         },
+        "outputPort": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/outputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
         "dataProductOwner": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
             "@type": "http://xmlns.com/foaf/0.1/Agent"
