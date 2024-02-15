@@ -10,29 +10,31 @@
         "sh": "http://www.w3.org/ns/shacl#",
         "id": "@id",
         "type": "@type",
-        "DataService": {
-            "@id": "http://www.w3.org/ns/dcat#DataService"
+        "SecuritySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
         },
-        "isAccessServiceOf": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
-            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        "Distribution": {
+            "@id": "http://www.w3.org/ns/dcat#Distribution"
         },
-        "protocol": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/protocol",
-            "@type": "http://www.w3.org/ns/dcat#Protocol"
+        "accessService": {
+            "@id": "http://www.w3.org/ns/dcat#accessService",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
         },
-        "securitySchemaType": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/securitySchemaType",
-            "@type": "http://www.w3.org/ns/dcat#SecuritySchemaType"
+        "conformsTo": {
+            "@id": "http://purl.org/dc/terms/conformsTo"
         },
-        "endpointURL": {
-            "@id": "http://www.w3.org/ns/dcat#endpointURL"
+        "isDistributionOf": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/isDistributionOf",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
         },
-        "endpointDescription": {
-            "@id": "http://www.w3.org/ns/dcat#endpointDescription"
+        "format": {
+            "@id": "http://purl.org/dc/terms/format"
         },
-        "Dataset": {
-            "@id": "http://www.w3.org/ns/dcat#Dataset"
+        "DataProductLifecycleStatus": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        },
+        "DataProduct": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
         },
         "label": {
             "@id": "http://www.w3.org/2000/01/rdf-schema#label",
@@ -41,23 +43,6 @@
         "description": {
             "@id": "http://purl.org/dc/terms/description",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "distribution": {
-            "@id": "http://www.w3.org/ns/dcat#distribution",
-            "@type": "http://www.w3.org/ns/dcat#Distribution"
-        },
-        "conformsTo": {
-            "@id": "http://purl.org/dc/terms/conformsTo"
-        },
-        "hasPolicy": {
-            "@id": "http://www.w3.org/ns/odrl/2/hasPolicy"
-        },
-        "informationSensitivityClassification": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification",
-            "@type": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
-        },
-        "DataProduct": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
         },
         "dataProductOwner": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
@@ -86,29 +71,48 @@
             "@id": "https://ekgf.github.io/data-product-spec/dprod/purpose",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
+        "hasPolicy": {
+            "@id": "http://www.w3.org/ns/odrl/2/hasPolicy"
+        },
         "productionProcessDescription": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/productionProcessDescription",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "DataProductLifecycleStatus": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        "lifecycleStatus": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus",
+            "@type": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
         },
-        "Distribution": {
-            "@id": "http://www.w3.org/ns/dcat#Distribution"
+        "Dataset": {
+            "@id": "http://www.w3.org/ns/dcat#Dataset"
         },
-        "accessService": {
-            "@id": "http://www.w3.org/ns/dcat#accessService",
-            "@type": "http://www.w3.org/ns/dcat#DataService"
+        "distribution": {
+            "@id": "http://www.w3.org/ns/dcat#distribution",
+            "@type": "http://www.w3.org/ns/dcat#Distribution"
         },
-        "isDistributionOf": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/isDistributionOf",
-            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        "informationSensitivityClassification": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification",
+            "@type": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
         },
-        "format": {
-            "@id": "http://purl.org/dc/terms/format"
+        "DataService": {
+            "@id": "http://www.w3.org/ns/dcat#DataService"
         },
-        "SecuritySchemaType": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
+        "isAccessServiceOf": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
+            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "protocol": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/protocol",
+            "@type": "http://www.w3.org/ns/dcat#Protocol"
+        },
+        "securitySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/securitySchemaType",
+            "@type": "http://www.w3.org/ns/dcat#SecuritySchemaType"
+        },
+        "endpointURL": {
+            "@id": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        "endpointDescription": {
+            "@id": "http://www.w3.org/ns/dcat#endpointDescription"
         },
         "Protocol": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/Protocol"
