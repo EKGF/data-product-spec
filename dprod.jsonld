@@ -10,54 +10,111 @@
         "sh": "http://www.w3.org/ns/shacl#",
         "id": "@id",
         "type": "@type",
+        "DataService": {
+            "@id": "http://www.w3.org/ns/dcat#DataService"
+        },
         "isAccessServiceOf": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
             "@type": "http://www.w3.org/ns/dcat#Distribution"
         },
-        "outputPort": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/outputPort",
-            "@type": "http://www.w3.org/ns/dcat#DataService"
+        "protocol": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/protocol",
+            "@type": "http://www.w3.org/ns/dcat#Protocol"
+        },
+        "securitySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/securitySchemaType",
+            "@type": "http://www.w3.org/ns/dcat#SecuritySchemaType"
+        },
+        "endpointURL": {
+            "@id": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        "endpointDescription": {
+            "@id": "http://www.w3.org/ns/dcat#endpointDescription"
+        },
+        "Dataset": {
+            "@id": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "description": {
+            "@id": "http://purl.org/dc/terms/description",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "distribution": {
+            "@id": "http://www.w3.org/ns/dcat#distribution",
+            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "conformsTo": {
+            "@id": "http://purl.org/dc/terms/conformsTo"
+        },
+        "hasPolicy": {
+            "@id": "http://www.w3.org/ns/odrl/2/hasPolicy"
+        },
+        "informationSensitivityClassification": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification",
+            "@type": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
+        },
+        "DataProduct": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
         },
         "dataProductOwner": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
             "@type": "http://xmlns.com/foaf/0.1/Agent"
         },
-        "DataProduct": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
+        "domain": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/domain"
         },
-        "Dataset": {
-            "@id": "http://www.w3.org/ns/dcat#Dataset"
+        "inputPort": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/inputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
         },
-        "lifecycleStatus": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus",
-            "@type": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        "outputPort": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/outputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
         },
-        "InformationSensitivityClassification": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
+        "inputDataset": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/inputDataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "outputDataset": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/outputDataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
         },
         "purpose": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/purpose",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "informationSensitivityClassification": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification",
-            "@type": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitiviyClassification"
-        },
         "productionProcessDescription": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/productionProcessDescription",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "SecuritySchemaType": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
+        "DataProductLifecycleStatus": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
         },
         "Distribution": {
             "@id": "http://www.w3.org/ns/dcat#Distribution"
         },
-        "DataProductLifecycleStatus": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        "accessService": {
+            "@id": "http://www.w3.org/ns/dcat#accessService",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "isDistributionOf": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/isDistributionOf",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "format": {
+            "@id": "http://purl.org/dc/terms/format"
+        },
+        "SecuritySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
         },
         "Protocol": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/Protocol"
+        },
+        "InformationSensitivityClassification": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
         }
     }
 }
