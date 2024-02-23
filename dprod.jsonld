@@ -10,53 +10,212 @@
         "sh": "http://www.w3.org/ns/shacl#",
         "id": "@id",
         "type": "@type",
-        "DataProductLifecycleStatus": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatusShape"
-        },
-        "lifecycleStatus": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus",
-            "@type": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        "InformationSensitivityClassification": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
         },
         "Dataset": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DatasetShape"
+            "@id": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "description": {
+            "@id": "http://purl.org/dc/terms/description",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "distribution": {
+            "@id": "http://www.w3.org/ns/dcat#distribution",
+            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "conformsTo": {
+            "@id": "http://purl.org/dc/terms/conformsTo"
+        },
+        "hasPolicy": {
+            "@id": "http://www.w3.org/ns/odrl/2/hasPolicy",
+            "@type": "http://www.w3.org/ns/odrl/2/Policy"
+        },
+        "informationSensitivityClassification": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification",
+            "@type": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassification"
         },
         "DataProduct": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductShape"
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProduct"
         },
         "dataProductOwner": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/dataProductOwner",
             "@type": "http://xmlns.com/foaf/0.1/Agent"
         },
-        "DataService": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataServiceShape"
+        "domain": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/domain"
         },
-        "SecuritySchemaType": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaTypeShape"
+        "inputPort": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/inputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
         },
-        "isAccessServiceOf": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
-            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        "outputPort": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/outputPort",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "inputDataset": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/inputDataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "outputDataset": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/outputDataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
         },
         "purpose": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/purpose",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "Protocol": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/ProtocolShape"
-        },
-        "Distribution": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/DistributionShape"
-        },
-        "informationSensitivityClassification": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification",
-            "@type": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitiviyClassification"
-        },
-        "InformationSensitivityClassification": {
-            "@id": "https://ekgf.github.io/data-product-spec/dprod/InformationSensitivityClassificationShape"
-        },
         "productionProcessDescription": {
             "@id": "https://ekgf.github.io/data-product-spec/dprod/productionProcessDescription",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "lifecycleStatus": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus",
+            "@type": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        },
+        "DataService": {
+            "@id": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "isAccessServiceOf": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf",
+            "@type": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "protocol": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/protocol",
+            "@type": "http://www.w3.org/ns/dcat#Protocol"
+        },
+        "securitySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/securitySchemaType",
+            "@type": "http://www.w3.org/ns/dcat#SecuritySchemaType"
+        },
+        "endpointURL": {
+            "@id": "http://www.w3.org/ns/dcat#endpointURL"
+        },
+        "endpointDescription": {
+            "@id": "http://www.w3.org/ns/dcat#endpointDescription"
+        },
+        "SecuritySchemaType": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/SecuritySchemaType"
+        },
+        "Distribution": {
+            "@id": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "accessService": {
+            "@id": "http://www.w3.org/ns/dcat#accessService",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "isDistributionOf": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/isDistributionOf",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "format": {
+            "@id": "http://purl.org/dc/terms/format"
+        },
+        "Protocol": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/Protocol"
+        },
+        "DataProductLifecycleStatus": {
+            "@id": "https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus"
+        },
+        "record": {
+            "@id": "http://www.w3.org/ns/dcat#record",
+            "@type": "http://www.w3.org/ns/dcat#CatalogRecord"
+        },
+        "spatialResolutionInMeters": {
+            "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
+            "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "keyword": {
+            "@id": "http://www.w3.org/ns/dcat#keyword",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "mediaType": {
+            "@id": "http://www.w3.org/ns/dcat#mediaType",
+            "@type": "http://purl.org/dc/terms/MediaType"
+        },
+        "accessURL": {
+            "@id": "http://www.w3.org/ns/dcat#accessURL",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "themeTaxonomy": {
+            "@id": "http://www.w3.org/ns/dcat#themeTaxonomy",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "centroid": {
+            "@id": "http://www.w3.org/ns/dcat#centroid",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "byteSize": {
+            "@id": "http://www.w3.org/ns/dcat#byteSize",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "startDate": {
+            "@id": "http://www.w3.org/ns/dcat#startDate",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "downloadURL": {
+            "@id": "http://www.w3.org/ns/dcat#downloadURL",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "landingPage": {
+            "@id": "http://www.w3.org/ns/dcat#landingPage",
+            "@type": "http://xmlns.com/foaf/0.1/Document"
+        },
+        "service": {
+            "@id": "http://www.w3.org/ns/dcat#service",
+            "@type": "http://www.w3.org/ns/dcat#DataService"
+        },
+        "dataset": {
+            "@id": "http://www.w3.org/ns/dcat#dataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "hadRole": {
+            "@id": "http://www.w3.org/ns/dcat#hadRole",
+            "@type": "http://www.w3.org/ns/dcat#Role"
+        },
+        "catalog": {
+            "@id": "http://www.w3.org/ns/dcat#catalog",
+            "@type": "http://www.w3.org/ns/dcat#Catalog"
+        },
+        "temporalResolution": {
+            "@id": "http://www.w3.org/ns/dcat#temporalResolution",
+            "@type": "http://www.w3.org/2001/XMLSchema#duration"
+        },
+        "endDate": {
+            "@id": "http://www.w3.org/ns/dcat#endDate",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "contactPoint": {
+            "@id": "http://www.w3.org/ns/dcat#contactPoint",
+            "@type": "http://www.w3.org/2006/vcard/ns#Kind"
+        },
+        "qualifiedRelation": {
+            "@id": "http://www.w3.org/ns/dcat#qualifiedRelation",
+            "@type": "http://www.w3.org/ns/dcat#Relationship"
+        },
+        "bbox": {
+            "@id": "http://www.w3.org/ns/dcat#bbox",
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "theme": {
+            "@id": "http://www.w3.org/ns/dcat#theme",
+            "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "servesDataset": {
+            "@id": "http://www.w3.org/ns/dcat#servesDataset",
+            "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "compressFormat": {
+            "@id": "http://www.w3.org/ns/dcat#compressFormat",
+            "@type": "http://purl.org/dc/terms/MediaType"
+        },
+        "packageFormat": {
+            "@id": "http://www.w3.org/ns/dcat#packageFormat",
+            "@type": "http://purl.org/dc/terms/MediaType"
         }
     }
 }

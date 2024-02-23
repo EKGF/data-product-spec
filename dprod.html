@@ -161,21 +161,22 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
   <pre id="eg12" class="example hljs json">
   {
     "@context": "https://ekgf.github.io/data-product-spec/dprod.jsonld",
-    "@id": "https://y.com/products/uk-bonds",
-    "@type": "DataProduct",
+    "id": "https://y.com/products/uk-bonds",
+    "type": "DataProduct",
     "title": "UK Bonds",
     "description": "UK Bonds is your one-stop-shop for all your bonds!",
     "dataProductOwner": "https://www.linkedin.com/in/tonyseale/",
-    "lifecycle" : "Consume",
+    "lifecycleStatus" : "https://ekgf.github.io/data-product-spec/dprod/data/lifecycle-status/Consume",
     "outputPort": {
-      "@type": "dcat:DataService",
-      "dcat:endpointURL": "https://y.com/uk-10-year-bonds",
+      "type": "DataService",
+      "endpointURL": "https://y.com/uk-10-year-bonds",
       "isAccessServiceOf": {
-        "@type": "dcat:Distribution",
-        "dcterms:format": "https://www.iana.org/assignments/media-types/application/json",
+        "type": "Distribution",
+        "format": "https://www.iana.org/assignments/media-types/application/json",
         "isDistributionOf": {
-          "@type": "dcat:Dataset",
-          "dcat:conformsTo": "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/CallableBond"
+          "type": "Dataset",
+          "id": "https://y.com/products/uk-bonds/datasets/10-year",
+          "conformsTo": "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/CallableBond"
         }
       }
      }
@@ -198,7 +199,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>label</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-label">dprod:label</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-label</td></tr>
 
@@ -213,7 +214,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>description</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-description">dprod:description</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://purl.org/dc/terms/description">dcterms:description</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-description</td></tr>
 
@@ -228,7 +229,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>dataProductOwner</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-dataProductOwner">dprod:dataProductOwner</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/dataProductOwner">dprod:dataProductOwner</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-dataProductOwner</td></tr>
 
@@ -243,7 +244,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>domain</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-domain">dprod:domain</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/domain">dprod:domain</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-domain</td></tr>
 
@@ -258,7 +259,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>inputPort</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-inputPort">dprod:inputPort</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/inputPort">dprod:inputPort</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-inputPort Shape</td></tr>
 
@@ -273,7 +274,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>outputPort</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-outputPort">dprod:outputPort</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/outputPort">dprod:outputPort</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-outputPort Shape</td></tr>
 
@@ -288,7 +289,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>inputDataset</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-inputDataset">dprod:inputDataset</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/inputDataset">dprod:inputDataset</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-inputDataset</td></tr>
 
@@ -303,7 +304,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>outputDataset</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-outputDataset">dprod:outputDataset</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/outputDataset">dprod:outputDataset</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-outputDataset</td></tr>
 
@@ -318,7 +319,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>purpose</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-purpose">dprod:purpose</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/purpose">dprod:purpose</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-purpose</td></tr>
 
@@ -333,7 +334,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>hasPolicy</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-hasPolicy">dprod:hasPolicy</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/odrl/2/hasPolicy">odrl:hasPolicy</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-hasPolicy</td></tr>
 
@@ -348,13 +349,28 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>productionProcessDescription</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct-productionProcessDescription">dprod:productionProcessDescription</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/productionProcessDescription">dprod:productionProcessDescription</a></td></tr>
 
           <tr><th>Label:</th><td>DataProduct-productionProcessDescription</td></tr>
 
           <tr><th>Notes:</th><td>A description of how the data comprising the data product is gathered, refined, or managed.</td></tr>
           <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
           <tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr>
+        </tbody>
+        </table>
+      </section>
+
+        <section>
+        <h2>lifecycleStatus</h2>
+        <table class="def propdef">
+        <tbody>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/lifecycleStatus">dprod:lifecycleStatus</a></td></tr>
+
+          <tr><th>Label:</th><td>DataProduct-lifecycleStatus</td></tr>
+
+          <tr><th>Notes:</th><td>The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ). </td></tr>
+          <tr><th>Domain:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProduct">dprod:DataProduct</a></td></tr>
+          <tr><th>Range:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataProductLifecycleStatus">dprod:DataProductLifecycleStatus</a></td></tr>
         </tbody>
         </table>
       </section>
@@ -369,7 +385,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>isAccessServiceOf</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-isAccessServiceOf">dprod:isAccessServiceOf</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/isAccessServiceOf">dprod:isAccessServiceOf</a></td></tr>
 
           <tr><th>Label:</th><td>DataService-isAccessServiceOf Shape</td></tr>
 
@@ -384,7 +400,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>protocol</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-protocol">dprod:protocol</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/protocol">dprod:protocol</a></td></tr>
 
           <tr><th>Label:</th><td>DataService-protocol Shape</td></tr>
 
@@ -399,7 +415,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>securitySchemaType</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-securitySchemaType">dprod:securitySchemaType</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/securitySchemaType">dprod:securitySchemaType</a></td></tr>
 
           <tr><th>Label:</th><td>DataService-securitySchemaType Shape</td></tr>
 
@@ -414,7 +430,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>endpointURL</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-endpointURL">dprod:endpointURL</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#endpointURL">dcat:endpointURL</a></td></tr>
 
           <tr><th>Label:</th><td>DataService-endpointURL</td></tr>
 
@@ -429,7 +445,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>endpointDescription</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/DataService-endpointDescription">dprod:endpointDescription</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#endpointDescription">dcat:endpointDescription</a></td></tr>
 
           <tr><th>Label:</th><td>DataService-endpointDescription</td></tr>
 
@@ -450,7 +466,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>accessService</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Distribution-accessService">dprod:accessService</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#accessService">dcat:accessService</a></td></tr>
 
           <tr><th>Label:</th><td>Distribution-accessService</td></tr>
 
@@ -465,7 +481,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>conformsTo</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Distribution-conformsTo">dprod:conformsTo</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></td></tr>
 
           <tr><th>Label:</th><td>Distribution-conformsTo</td></tr>
 
@@ -480,7 +496,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>isDistributionOf</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Distribution-isDistributionOf">dprod:isDistributionOf</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/isDistributionOf">dprod:isDistributionOf</a></td></tr>
 
           <tr><th>Label:</th><td>Distribution-isDistributionOf</td></tr>
 
@@ -495,7 +511,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>format</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Distribution-format">dprod:format</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://purl.org/dc/terms/format">dcterms:format</a></td></tr>
 
           <tr><th>Label:</th><td>Distribution-format</td></tr>
 
@@ -516,7 +532,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>label</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Dataset-label">dprod:label</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></td></tr>
 
           <tr><th>Label:</th><td>Dataset-label</td></tr>
 
@@ -531,7 +547,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>description</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Dataset-description">dprod:description</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://purl.org/dc/terms/description">dcterms:description</a></td></tr>
 
           <tr><th>Label:</th><td>Dataset-distribution</td></tr>
 
@@ -546,7 +562,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>type</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Dataset-type">dprod:type</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://purl.org/dc/terms/type">dcterms:type</a></td></tr>
 
           <tr><th>Label:</th><td>Dataset-type</td></tr>
 
@@ -561,7 +577,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>distribution</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Dataset-distribution">dprod:distribution</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a></td></tr>
 
           <tr><th>Label:</th><td>Dataset-distribution</td></tr>
 
@@ -576,7 +592,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>conformsTo</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Dataset-conformsTo">dprod:conformsTo</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a></td></tr>
 
           <tr><th>Label:</th><td>Dataset-conformsTo</td></tr>
 
@@ -591,7 +607,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>hasPolicy</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/Dataset-hasPolicy">dprod:hasPolicy</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/odrl/2/hasPolicy">odrl:hasPolicy</a></td></tr>
 
           <tr><th>Label:</th><td>Dataset-hasPolicy</td></tr>
 
@@ -606,7 +622,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
         <h2>informationSensitivityClassification</h2>
         <table class="def propdef">
         <tbody>
-          <tr><th>Identifier:</th><td><a href="http://www.w3.org/ns/dcat#Dataset-informationSensitivityClassification">dprod:informationSensitivityClassification</a></td></tr>
+          <tr><th>Identifier:</th><td><a href="https://ekgf.github.io/data-product-spec/dprod/informationSensitivityClassification">dprod:informationSensitivityClassification</a></td></tr>
 
           <tr><th>Label:</th><td>Dataset-informationSensitivityClassification</td></tr>
 
@@ -620,8 +636,8 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+      <h2>InformationSensitivityClassification</h2>
+        A taxonomy of concepts that classifies the information within a dataset that indicates the level of control and protection that must be applied to the dataset
 
       </section>
 
@@ -638,8 +654,8 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>InformationSensitivityClassification</h2>
-        A taxonomy of concepts that classifies the information within a dataset that indicates the level of control and protection that must be applied to the dataset
+      <h2>DataProductLifecycleStatus</h2>
+        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
 
       </section>
 
