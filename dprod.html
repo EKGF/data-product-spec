@@ -6,7 +6,7 @@
     <script class='remove'>
       // All config options at https://respec.org/docs/
       var respecConfig = {
-        // Working Groups ids at httaps://respec.org/w3c/groups/
+        // Working Groups ids at https://respec.org/w3c/groups/
         // group: "Semantic Data Products Working Group",
         latestVersion: "https://ekgf.github.io/data-product-spec/dprod" ,
         specStatus: "base",
@@ -17,7 +17,11 @@
         },
         {
           name: "Natasa Varytimou",
-          url:  "https://www.ubs.com/",
+          url:  "https://www.linkedin.com/in/natasavaritimou/",
+        },
+        {
+          name: "Andrea Gioia",
+          url:  "https://www.linkedin.com/in/andreagioia/",
         }
         ],
         github: {
@@ -389,7 +393,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
 
       <section>
       <h2>DataService</h2>
-
+        A collection of operations that provides access to one or more datasets or data processing functions.
 
         <section>
         <h2>isAccessServiceOf</h2>
@@ -467,7 +471,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
 
       <section>
       <h2>Distribution</h2>
-
+        A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).
 
         <section>
         <h2>accessService</h2>
@@ -531,7 +535,7 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
 
       <section>
       <h2>Dataset</h2>
-
+        A collection of data, published or curated by a single agent, and available for access or download in one or more representations.
 
         <section>
         <h2>label</h2>
@@ -642,20 +646,20 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
       </section>
 
       <section>
-      <h2>Protocol</h2>
-        A protocol, possibly including a specific version, used for communicating with a service
-
-      </section>
-
-      <section>
       <h2>InformationSensitivityClassification</h2>
-        A taxonomy of concepts that classifies the information within a dataset that indicates the level of control and protection that must be applied to the dataset
+        The shape of Information Sensitivity Classification as defined in the dprod schema
 
       </section>
 
       <section>
       <h2>DataProductLifecycleStatus</h2>
-        The lifecycle status of the Data Product taken from a control list ( Ideation, Design, Build, Deploy, Consume ).
+        The shape of Data Product Lifecycle Status
+
+      </section>
+
+      <section>
+      <h2>Protocol</h2>
+        A protocol, possibly including a specific version, used for communicating with a service
 
       </section>
 
@@ -667,55 +671,122 @@ As <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">DCAT Data Se
 
 
     <section>
-      <h2>Data Linage</h2>
-        <p>It is important to be able to trace the lineage of data. Data Products have input and output ports, and one Data Product’s input port will point to another Data Product’s output port.</p>
-<p>This allows a user to query the lineage of where the data has come from by following the inputs. Here is an example query that will return all the input datasets for the finance data product.</p>
+      <h2>Core Data Product Extensions</h2>
+        <p>For real world data products, the core data product details will be part of a wider set of metadata that allows the data and data product to be used effectively. Below is an example of extending the DPROD data product, specifically by adding an agreement to a data product.</p>
+<p>In this example, a Data Product Agreement is defined as a subclass of FIBO Agreement. </p>
+<p><em>Definition of a simple Agreement based on FIBO:</em></p>
 <pre>
                         <code>
-SELECT DISTINCT ?input
-WHERE
+[
+  {
+    "@context": [
+      https://ekgf.github.io/data-product-spec/dprod.jsonld,
+      {
+        "fibo": http://spec.edmcouncil.org/fibo/ontology/FND/Agreements/MetadataFNDAgreements/#,
+        "ex": http://example.org/dp#
+      }
+    ],
+    "@id": "ex:isSubjectToAgreement",
+    "@type": "rdf:Property",
+    "rdfs:label": "Data Product is Subject To FIBO Agreement",
+    "rdfs:domain": {
+      "@id": "DataProduct"
+    },
+    "rdfs:range": {
+      "@id": "DataProductAgreement"
+    }
+  },
+  {
+    "@id": "ex:DataProductAgreement",
+    "@type": "rdfs:class",
+    "rdfs:label": "DataProductAgreement",
+    "rdfs:subClassOf": {
+      "@id": "fibo:Agreement"
+    }
+  }
+]
+
+</code>
+                    </pre>
+
+<p>A full definition of agreements for data products is likely to be more complex than a single class and may use other information models or their profiles (such as ODRL Policy) or create dedicated definitions.</p>
+<p>Below is an example of a Data Product with an associated Data Product Agreement with an effective date.</p>
+<p><em>Using the agreement:</em></p>
+<pre>
+                        <code>
 {
-  :company-finance dprod:inputPort ?inputPort.
-  ?inputPort dprod:isAccessServiceOf/dprod:isDistributionOf/rdfs:label ?input.
+  "@context": [
+    https://ekgf.github.io/data-product-spec/dprod.jsonld,
+    {
+      "fibo": http://spec.edmcouncil.org/fibo/ontology/FND/Agreements/MetadataFNDAgreements/#,
+      "ex": http://example.org/dp#
+    }
+  ],
+
+  "dataProducts": [
+    {
+      "id": https://y.com/data-product/company-sales,
+      "type": "DataProduct",
+      "outputPort": {
+        "id": https://y.com/data-product/company-sales/port/2025-sales,
+        "type": "DataService",
+        "label": "Sales",
+        "endpointURL": https://y.com/data-product/company-sales/port/2025-sales,
+        "isAccessServiceOf": {
+          "type": "Distribution",
+          "format": https://www.iana.org/assignments/media-types/application/json,
+          "isDistributionOf": {
+            "type": "Dataset",
+            "label": "Sales",
+            "id": https://y.com/data-product/company-sales/dataset/2025-sales,
+            "conformsTo": https://y.com/schema/Sale
+          }
+        }
+      },
+      "ex:iSubjectToAgreement": {
+        "@id": "ex:VVSimpleAgreement",
+        "@type": "ex:DataProductagreement"
+      }
+    }
+  ],
+
+  "agreements": [
+    {
+      "@id": "ex:VVSimpleAgreement",
+      "@type": "ex:DataProductAgreement",
+      "rdfs:label": "Very Simple Data Product Agreement",
+      "fibo:hasEffectiveDate": {
+        "@type": "xsd:date",
+        "@value": "2024-08-31"
+      }
+    }
+  ]
 }
 
 </code>
                     </pre>
+        <pre class="example hljs json"></pre>
+     </section>
 
-<p>Based on the data in the example, this query would return:
-- Sales
-- Payroll</p>
-<p>NOTE: If you wish to track lineage at a more granular level, you can also use PROV (https://www.w3.org/TR/prov-o/) at the dataset level.
-See: https://www.w3.org/TR/vocab-dcat-3/#examples-dataset-provenance.</p>
+    <section>
+      <h2>Data Lineage</h2>
+        <h2>Data Lineage</h2>
+<p>It is important to be able to trace the lineage of data. Within DPROD, this can be done in two ways: at a high level from one data product to another and, if you want, at a more detailed level of the underlying datasets.</p>
+<h3>High Level Lineage: Between Data Products</h3>
+<p>Data products have input and output ports, and one data product’s input port will point to another data product’s output port.</p>
+<p>This allows a user to query the lineage. The data products all have URLs as identifiers, and properties all connect to each other, so you can walk from one data product to the downstream data products that feed it.</p>
+<p>You can follow the path that leads from one data product to another like this:</p>
 <pre>
                         <code>
-dap:atnf-P366-2003SEPT
-  rdf:type dcat:Dataset ;
-  dcterms:bibliographicCitation "Burgay, M; McLaughlin, M; Kramer, M; Lyne, A; Joshi, B; Pearce, G; D'Amico, N; Possenti, A; Manchester, R; Camilo, F (2017): Parkes observations for project P366 semester 2003SEPT. v1. CSIRO. Data Collection. https://doi.org/10.4225/08/598dc08d07bb7" ;
-  dcterms:title "Parkes observations for project P366 semester 2003SEPT"@en ;
-  dcat:landingPage <https://data.csiro.au/dap/landingpage?pid=csiro:P366-2003SEPT> ;
-  prov:wasGeneratedBy dap:P366 ;
-  .
-
-dap:P366
-  rdf:type prov:Activity ;
-  dcterms:type <http://dbpedia.org/resource/Observation> ;
-  prov:startedAtTime "2000-11-01"^^xsd:date ;
-  prov:used dap:Parkes-radio-telescope ;
-  prov:wasInformedBy dap:ATNF ;
-  rdfs:label "P366 - Parkes multibeam high-latitude pulsar survey"@en ;
-  rdfs:seeAlso <https://doi.org/10.1111/j.1365-2966.2006.10100.x> ;
-  .
+Data Product >> inputPort >> isAccessServiceOf >> isDistributionOf >> Input Data Product
 
 </code>
                     </pre>
 
-<p>NOTE: For the example SPARQL query above to run you would also need to include the following prefixes:
-  - PREFIX dcat: <a href="http://www.w3.org/ns/dcat#">http://www.w3.org/ns/dcat#</a>
-  - PREFIX dprod: <a href="https://ekgf.github.io/data-product-spec/dprod/">https://ekgf.github.io/data-product-spec/dprod/</a>
-  - PREFIX rdfs: <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a>
-  - PREFIX : <a href="https://y.com/data-product/">https://y.com/data-product/</a></p>
-        <pre class="example hljs json">{
+<p>Let's look at some example data with three data products that connect to each other through their input and output ports: </p>
+<pre>
+                        <code>
+{
   "@context": "https://ekgf.github.io/data-product-spec/dprod.jsonld",
   "dataProducts": [
     {
@@ -789,15 +860,73 @@ dap:P366
     }
   ]
 }
-</pre>
+
+</code>
+                    </pre>
+
+<p>Given this example data, if we started at the data product <code>https://y.com/data-product/company-finance</code>, we could walk the relationships to find the input data products that feed it:</p>
+<pre>
+                        <code>
+https://y.com/data-product/company-finance >> :inputPort >> :isAccessServiceOf >> :isDistributionOf >> [https://y.com/data-product/company-sales , https://y.com/data-product/company-hr]
+
+</code>
+                    </pre>
+
+<p>In Linked Data, we would actually do this with a query like this:</p>
+<pre>
+                        <code>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dprod: <https://ekgf.github.io/data-product-spec/dprod/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <https://y.com/data-product/>
+
+SELECT DISTINCT ?input
+WHERE
+{
+  :company-finance dprod:inputPort ?inputPort.
+  ?inputPort dprod:isAccessServiceOf/dprod:isDistributionOf/rdfs:label ?input.
+}
+
+</code>
+                    </pre>
+
+<h3>Detailed Level: Between Datasets</h3>
+<p>If you wish to track lineage at a more granular level, you can also use PROV (https://www.w3.org/TR/prov-o/) at the dataset level.</p>
+<pre>
+                        <code>
+dap:atnf-P366-2003SEPT
+  rdf:type dcat:Dataset ;
+  dcterms:bibliographicCitation "Burgay, M; McLaughlin, M; Kramer, M; Lyne, A; Joshi, B; Pearce, G; D'Amico, N; Possenti, A; Manchester, R; Camilo, F (2017): Parkes observations for project P366 semester 2003SEPT. v1. CSIRO. Data Collection. https://doi.org/10.4225/08/598dc08d07bb7" ;
+  dcterms:title "Parkes observations for project P366 semester 2003SEPT"@en ;
+  dcat:landingPage <https://data.csiro.au/dap/landingpage?pid=csiro:P366-2003SEPT> ;
+  prov:wasGeneratedBy dap:P366 ;
+  .
+
+dap:P366
+  rdf:type prov:Activity ;
+  dcterms:type <http://dbpedia.org/resource/Observation> ;
+  prov:startedAtTime "2000-11-01"^^xsd:date ;
+  prov:used dap:Parkes-radio-telescope ;
+  prov:wasInformedBy dap:ATNF ;
+  rdfs:label "P366 - Parkes multibeam high-latitude pulsar survey"@en ;
+  rdfs:seeAlso <https://doi.org/10.1111/j.1365-2966.2006.10100.x> ;
+  .
+
+</code>
+                    </pre>
+
+<p>See: https://www.w3.org/TR/vocab-dcat-3/#examples-dataset-provenance.</p>
+        <pre class="example hljs json"></pre>
      </section>
 
     <section>
       <h2>Data Quality</h2>
-        <p>DQV is a standard vocabulary to describe data quality and is proposed along with the DCAT vocabulary to measure the quality of Datasets
-It is based on 3 basic entities, Categories, the Metrics that belong to its category, and the Measurement for each metric
-Data Quality can be computed in different levels, eg. data product, dataset, table, column level etc.
-Usually, data quality metrics are measured in Dataset level and can inform more high level quality metrics on data product level</p>
+        <ul>
+<li>DQV is a standard vocabulary to describe data quality and is proposed along with the DCAT vocabulary to measure the quality of Datasets.</li>
+<li>It is based on 3 basic entities: Dimensions, the Metrics that belong to its dimension, and the Measurement for each Metric.</li>
+<li>Data Quality can be computed in different levels, eg. data product, dataset, table, column level etc. </li>
+<li>Usually, data quality metrics are measured on a Dataset level and can inform more high level quality metrics on a data product level.</li>
+</ul>
         <pre class="example hljs json">[
 
   {
@@ -870,18 +999,18 @@ examplePolicyB odrl:targets exampleDataset:DatasetA1
 <pre>
                         <code>
 examplePolicyA odrl:permission
-    [
+   {
     "action": "odrl:distribute",
     "constraint": [
        {"leftOperand": "region",
          "operator": "eq",
         "rightOperator": "region:EMEA"
+       }
+     ]
     }
-    ]
 
 </code>
                     </pre>
-<p>.</p>
         <pre class="example hljs json">{
   "@type": "Policy",
   "id": "56456df-dfg-34535345-5545",
@@ -1044,9 +1173,83 @@ rdfs:isDefinedBy exampleSchema:DatasetLogicalSchema;
 
     <section>
       <h2>Observability</h2>
-        <p>An Observability Port is a designated interface or endpoint in a system or application specifically used for monitoring and diagnostic purposes. It allows external tools or services to collect and analyze data related to the system's performance, health, and behaviour. By exposing metrics, logs, and traces through this port, administrators and developers can gain insights into the system's state, troubleshoot issues, and ensure it operates efficiently and reliably.</p>
-<p>DPROD has a schema-first design, to the first thing you would need to do is define an schema for your logging information. It could be a schema based on open telemetry etc, but in this example we use RLOG (which is a semantic ontology for logging).</p>
-<p>If I want to find the Observability Port then I would query the ports to find the ones that returned an RLOG:Entry:</p>
+        <h2>Observability Ports</h2>
+<p>An Observability Port is a designated interface or endpoint in a system or application specifically used for monitoring and diagnostic purposes. It allows external tools or services to collect and analyze data related to the system's performance, health, and behaviour. By exposing metrics, logs, and traces through this port, administrators and developers can gain insights into the system's state, troubleshoot issues, and ensure it operates efficiently and reliably.</p>
+<h3>Defining Observability Ports in DPROD</h3>
+<p>DPROD has a schema-first design. The first thing you would need to do is define a schema for your logging information. It could be a schema based on OpenTelemetry, but in this example, we use RLOG (which is a semantic ontology for logging).</p>
+<p>To find the Observability Port, you would query the ports to identify the ones that return an <code>RLOG:Entry</code>:</p>
+<pre>
+                        <code>
+  outputPort >> isAccessServiceOf >> isDistributionOf >> conformsTo  >> rlog:Entry
+
+</code>
+                    </pre>
+
+<h3>Example Data Product with Observability Port</h3>
+<p>You can see that the example data product has two ports, one with the data and one with the logging. This query will return the URI of the port that returns logging data: <code>https://y.com/uk-bonds/observability-port</code>.</p>
+<p>Here is an example of a data product with an observability port:</p>
+<pre>
+                        <code>
+{
+  "@context": "https://ekgf.github.io/data-product-spec/dprod.jsonld",
+  "dataProducts": [
+    {
+      "id": "https://y.com/data-product/uk-bonds",
+      "type": "DataProduct",
+      "inputPort": [
+        {
+          "id": "https://y.com/data-product/uk-bonds/port/2024-data",
+          "type": "DataService"
+        }
+      ],
+      "outputPort": [
+        {
+          "id": "https://y.com/data-product/uk-bonds/port/2024-observability",
+          "type": "DataService",
+          "label": "Observability Port",
+          "endpointURL": "https://y.com/data-product/uk-bonds/port/2024-observability",
+          "isAccessServiceOf": {
+            "type": "Distribution",
+            "format": "https://www.iana.org/assignments/media-types/application/json",
+            "isDistributionOf": {
+              "type": "Dataset",
+              "id": "https://y.com/data-product/uk-bonds/dataset/2024-observability",
+              "conformsTo": "https://y.com/schema/ObservabilityLog"
+            }
+          }
+        },
+        {
+          "id": "https://y.com/data-product/uk-bonds/port/2024-data",
+          "type": "DataService",
+          "label": "Data Port",
+          "endpointURL": "https://y.com/data-product/uk-bonds/port/2024-data",
+          "isAccessServiceOf": {
+            "type": "Distribution",
+            "format": "https://www.iana.org/assignments/media-types/application/json",
+            "isDistributionOf": {
+              "type": "Dataset",
+              "id": "https://y.com/data-product/uk-bonds/dataset/2024-data",
+              "conformsTo": "https://y.com/schema/Data"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+</code>
+                    </pre>
+
+<p>Given that our schema defines the class for an observation, we can use that to find all observantly ports on data product like this:</p>
+<pre>
+                        <code>
+[https://y.com/data-product/uk-bonds/port/2024-observability] >> isAccessServiceOf >> isDistributionOf >> conformsTo >> https://y.com/schema/ObservabilityLog
+
+</code>
+                    </pre>
+
+<p>In Linked Data we would use a SPARQL query to do that:</p>
 <pre>
                         <code>
 SELECT ?port
@@ -1059,42 +1262,8 @@ WHERE
 </code>
                     </pre>
 
-<p>You can see that the example data product has two ports one with the data and one with the logging. This query will return the URI of the port that returns logging data: https://y.com/uk-bonds/observability-port</p>
-        <pre class="example hljs json">{
-  "@context": "https://ekgf.github.io/data-product-spec/dprod.jsonld",
-  "id": "https://y.com/products/uk-bonds",
-  "type": "DataProduct",
-  "outputPort": [{
-    "id": "https://y.com/uk-bonds/observability-port",
-    "type": "DataService",
-    "label": "Observability Port",
-    "endpointURL": "https://y.com/uk-bonds/observability",
-    "isAccessServiceOf": {
-      "type": "Distribution",
-      "format": "https://www.iana.org/assignments/media-types/text/turtle",
-      "isDistributionOf": {
-        "type": "Dataset",
-        "conformsTo": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"
-      }
-    }
-   },
-    {
-      "type": "DataService",
-      "label": "Main Data Port",
-      "endpointURL": "https://y.com/uk-10-year-bonds",
-      "isAccessServiceOf": {
-        "type": "Distribution",
-        "format": "https://www.iana.org/assignments/media-types/application/json",
-        "isDistributionOf": {
-          "type": "Dataset",
-          "id": "https://y.com/products/uk-bonds/datasets/10-year",
-          "conformsTo": "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/CallableBond"
-        }
-      }
-    }
-  ]
-}
-</pre>
+<p>This query will return the URI of the port that provides logging data: <code>https://y.com/data-product/uk-bonds/port/2024-observability</code>.</p>
+        <pre class="example hljs json"></pre>
      </section>
 
     <section>
