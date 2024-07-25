@@ -52,6 +52,14 @@ dprod:
         ] ;
       foaf:name "Marcel Fröhlich" ;
     ] ;
+    dct:contributor [
+      a foaf:Person ;
+      sdo:affiliation [
+        foaf:homepage <https://agnos.ai> ;
+        foaf:name "agnos.ai" ;
+      ] ;
+      foaf:name "Jacobus Geluk" ;
+    ] ;
    dct:contributor [
       a foaf:Person ;
       foaf:name "Pete Rivett" ;
@@ -77,7 +85,7 @@ dprod:
   owl:versionInfo "Create the Data Product ontology based on input and output dcat datasets"@en ;
   foaf:maker [
       foaf:homepage <http://www.ekgf.org/> ;
-      foaf:name "Enterprise Knowledge Graph Foundation" ;
+      foaf:name "Enterprise Knowledge Graph Forum" ;
     ] ;
    .
 
